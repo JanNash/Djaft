@@ -66,12 +66,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E03A8F51C25BF0E003149CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76E61C25A25E00FADBF0 /* SWManagedObject.swift */,
+				5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */,
+				5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */,
+				5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */,
+				5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */,
+				5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */,
+				5EEC76EA1C25A25E00FADBF0 /* SWSlicedQuerySet.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5E03A8F61C25BF1C003149CC /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		5EEC76C11C25A1D200FADBF0 = {
 			isa = PBXGroup;
 			children = (
+				5EEC76CC1C25A1D200FADBF0 /* Products */,
 				5EEC76CD1C25A1D200FADBF0 /* Swango */,
 				5EEC76D91C25A1D200FADBF0 /* SwangoTests */,
-				5EEC76CC1C25A1D200FADBF0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				5EEC76E51C25A20900FADBF0 /* Sources */,
-				5EEC76CE1C25A1D200FADBF0 /* Swango.h */,
 				5EEC76D01C25A1D200FADBF0 /* Info.plist */,
+				5EEC76CE1C25A1D200FADBF0 /* Swango.h */,
 			);
 			path = Swango;
 			sourceTree = "<group>";
@@ -97,8 +119,8 @@
 		5EEC76D91C25A1D200FADBF0 /* SwangoTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76DA1C25A1D200FADBF0 /* SwangoTests.swift */,
 				5EEC76DC1C25A1D200FADBF0 /* Info.plist */,
+				5EEC76DA1C25A1D200FADBF0 /* SwangoTests.swift */,
 			);
 			path = SwangoTests;
 			sourceTree = "<group>";
@@ -106,16 +128,10 @@
 		5EEC76E51C25A20900FADBF0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76E61C25A25E00FADBF0 /* SWManagedObject.swift */,
-				5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */,
-				5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */,
-				5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */,
-				5EEC76EA1C25A25E00FADBF0 /* SWSlicedQuerySet.swift */,
-				5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */,
-				5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */,
-				5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */,
+				5E03A8F51C25BF0E003149CC /* Classes */,
+				5E03A8F61C25BF1C003149CC /* Functions */,
 			);
-			name = Sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
