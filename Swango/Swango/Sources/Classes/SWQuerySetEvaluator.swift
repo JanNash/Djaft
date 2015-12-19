@@ -217,7 +217,6 @@ private extension SWQuerySetEvaluator {
     private var _fetchRequest: NSFetchRequest {
 //        synchronized(self) {
             if self.__fetchRequest == nil {
-                print("constructing fetchRequest")
                 self.__fetchRequest = NSFetchRequest(entityName: self._className)
                 self.__fetchRequest!.fetchOffset = self.offset
                 self.__fetchRequest!.fetchLimit = self.limit
@@ -265,7 +264,6 @@ private extension SWQuerySetEvaluator {
                 if self.__objects != nil {
                     self.__count = self.__objects!.count
                 } else {
-                    print("Getting count for FetchRequest")
                     let errorPointer: NSErrorPointer = NSErrorPointer()
                     self.__count = self.objectContext.countForFetchRequest(self._fetchRequest, error: errorPointer)
                     if errorPointer != nil {
@@ -280,7 +278,6 @@ private extension SWQuerySetEvaluator {
 //        synchronized(self) {
             if self.__objects == nil {
                 do {
-                    print("Executing FetchRequest")
                     try self.__objects = self.objectContext.executeFetchRequest(self._fetchRequest) as? [NSManagedObject]
                 } catch let error as NSError {
                     printError(error)

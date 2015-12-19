@@ -69,9 +69,9 @@ private extension SWRefinableQuerySet {
         
         var limit: Int = endIndex - startIndex
         if limit <= 0 {
-            print("WARNING: Created FinalQuerySet with a limit <= 0. " +
-                "This is most likely caused by an erratic subscript-usage." +
-                "Limit was set to 0, thus this QuerySet will never return any objects.")
+            print("WARNING: Created SlicedQuerySet with a limit <= 0. " +
+                  "This is most likely caused by an erratic subscript-usage. " +
+                  "This QuerySet will never return any objects.")
             limit = 0
         }
         

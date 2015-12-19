@@ -38,14 +38,6 @@ public extension SWObjectManager {
 public class SWObjectManager: SWQuerySetGenerator {
     // Private Static Variable Properties
     private static var __defaultObjectContext: NSManagedObjectContext!
-    
-    // MARK: Override throwing fatalError, will be there until protected is hopefully implemented in Swift
-    override func __objects__() -> [NSManagedObject] {
-        fatalError("SWQuerySetEvaluator.__objects__() is meant for" +
-                   "subclass use only. To get all objects of class " +
-                   "\(self.className), please use \(self.className).objects.all()"
-        )
-    }
 }
 
 
