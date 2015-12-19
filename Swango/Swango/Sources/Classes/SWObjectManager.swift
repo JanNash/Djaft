@@ -19,11 +19,11 @@ public extension SWObjectManager {
     }
     
     // Creation/Deletion
-    public func create<T: SWManagedObject>() -> T {
+    public func create<T: NSManagedObject>() -> T {
         return self._create()
     }
     
-    public func delete<T: SWManagedObject>(obj: T) {
+    public func delete<T: NSManagedObject>(obj: T) {
         self._delete(obj)
     }
     
@@ -40,7 +40,7 @@ public class SWObjectManager: SWQuerySetGenerator {
     private static var __defaultObjectContext: NSManagedObjectContext!
     
     // MARK: Override throwing fatalError, will be there until protected is hopefully implemented in Swift
-    override func __objects__() -> [SWManagedObject] {
+    override func __objects__() -> [NSManagedObject] {
         fatalError("SWQuerySetEvaluator.__objects__() is meant for" +
                    "subclass use only. To get all objects of class " +
                    "\(self.className), please use \(self.className).objects.all()"
@@ -70,11 +70,11 @@ private extension SWObjectManager {
 // MARK: Creation/Deletion
 private extension SWObjectManager {
     // Creation/Deletion
-    private func _create<T: SWManagedObject>() -> T {
+    private func _create<T: NSManagedObject>() -> T {
         return NSEntityDescription.insertNewObjectForEntityForName(self.className, inManagedObjectContext: self.objectContext) as! T
     }
     
-    private func _delete<T: SWManagedObject>(obj: T) {
+    private func _delete<T: NSManagedObject>(obj: T) {
         self.objectContext.deleteObject(obj)
     }
 }

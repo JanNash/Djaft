@@ -15,7 +15,7 @@ import CoreData
 public extension SWMetaQuerySet {
     // Get Object At Index
     // (Evaluates)
-    public subscript(position: Int) -> SWManagedObject? {
+    public subscript(position: Int) -> NSManagedObject? {
         return self._getObjectAtIndex(position)
     }
 }
@@ -37,7 +37,7 @@ public class SWMetaQuerySet: SWQuerySetEvaluator {}
 // MARK: // Subscript Implementation Logic
 // MARK: Get Object At Index
 private extension SWMetaQuerySet {
-    private func _getObjectAtIndex(index: Int) -> SWManagedObject? {
+    private func _getObjectAtIndex(index: Int) -> NSManagedObject? {
         return self.__objects__()[index]
     }
 }

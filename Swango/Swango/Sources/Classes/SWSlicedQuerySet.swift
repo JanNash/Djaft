@@ -13,14 +13,14 @@ import CoreData
 // MARK: Main Implementation
 public class SWSlicedQuerySet: SWMetaQuerySet {
     // Initialization
-    init(withClass klass: SWManagedObject.Type,
+    init(withClass klass: NSManagedObject.Type,
          objectContext: NSManagedObjectContext? = nil,
          offset: Int,
          limit: Int,
          filters: [String] = [],
          excludes: [String] = [],
          ordeSWys: [String] = [],
-         fetchedObjects: [SWManagedObject]? = nil) {
+         fetchedObjects: [NSManagedObject]? = nil) {
             
         super.init(
             withClass: klass,

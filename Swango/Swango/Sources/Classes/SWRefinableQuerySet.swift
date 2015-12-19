@@ -21,7 +21,7 @@ public extension SWRefinableQuerySet {
     
     // Get Objects From Start To End With Step
     // (Evaluates)
-    public subscript(startIndex: Int, endIndex: Int, stepSize: Int) -> [SWManagedObject] {
+    public subscript(startIndex: Int, endIndex: Int, stepSize: Int) -> [NSManagedObject] {
         return self._objectsFromStart(startIndex, toEnd: endIndex, withStepSize: stepSize)
     }
     
@@ -62,7 +62,7 @@ private extension SWRefinableQuerySet {
 // MARK: Get Sliced QuerySet
 private extension SWRefinableQuerySet {
     private func _getSlicedQuerySet(startIndex: Int, endIndex: Int) -> SWSlicedQuerySet {
-        var objects: [SWManagedObject]?
+        var objects: [NSManagedObject]?
         if self.isFetched {
             objects = self.__objects__()
         }
@@ -91,9 +91,9 @@ private extension SWRefinableQuerySet {
 
 // MARK: Get Objects From Start To End With Step
 private extension SWMetaQuerySet {
-    private func _objectsFromStart(startIndex: Int, toEnd endIndex: Int, withStepSize stepSize: Int) -> [SWManagedObject] {
+    private func _objectsFromStart(startIndex: Int, toEnd endIndex: Int, withStepSize stepSize: Int) -> [NSManagedObject] {
         self.evaluate()
-        var result: [SWManagedObject] = []
+        var result: [NSManagedObject] = []
         var index: Int = startIndex
         while index < endIndex {
             result.append(self[index]!)

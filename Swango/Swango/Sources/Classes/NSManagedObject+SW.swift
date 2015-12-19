@@ -1,5 +1,5 @@
 //
-//  SWManagedObject.swift
+//  NSManagedObject+SW.swift
 //  Swango
 //
 //  Created by Jan Nash on 25/10/15.
@@ -11,7 +11,7 @@ import CoreData
 
 
 // MARK: Public Interface
-public extension SWManagedObject {
+public extension NSManagedObject {
     // Computed Class Properties
     public static var objects: SWObjectManager {
         return self._objectManager
@@ -25,7 +25,7 @@ public extension SWManagedObject {
 
 
 // MARK: Main Implementation
-public class SWManagedObject: NSManagedObject {
+private extension NSManagedObject {
     // Object Manager
     private static var __objectManager: SWObjectManager!
     
@@ -35,7 +35,7 @@ public class SWManagedObject: NSManagedObject {
 
 
 // MARK: Private Computed Static Properties
-private extension SWManagedObject {
+private extension NSManagedObject {
     private static var _objectManager: SWObjectManager {
         if self.__objectManager == nil {
             self.__objectManager = SWObjectManager(withClass: self)
@@ -73,7 +73,7 @@ private extension SWManagedObject {
 
     
 // MARK: Private Instance Functions
-private extension SWManagedObject {
+private extension NSManagedObject {
     private func _save() {
         do {
             try self.managedObjectContext?.save()

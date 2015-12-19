@@ -22,7 +22,7 @@ public extension SWQuerySetEvaluator {
     
     // // // Variable Readonly Properties
     // // Class Information
-    public var klass: SWManagedObject.Type {
+    public var klass: NSManagedObject.Type {
         get {return self._klass}
     }
     
@@ -81,12 +81,12 @@ public extension SWQuerySetEvaluator {
 // MARK: Main Implementation
 public class SWQuerySetEvaluator: AnyObject {
     // Initialization
-    init(withClass klass: SWManagedObject.Type,
+    init(withClass klass: NSManagedObject.Type,
          objectContext: NSManagedObjectContext? = nil,
          filters: [String] = [],
          excludes: [String] = [],
          ordeSWys: [String] = [],
-         fetchedObjects: [SWManagedObject]? = nil) {
+         fetchedObjects: [NSManagedObject]? = nil) {
             
         self._klass = klass
         self.__objectContext = objectContext
@@ -104,7 +104,7 @@ public class SWQuerySetEvaluator: AnyObject {
     }
     
     // Private Constant Properties
-    private let _klass: SWManagedObject.Type!
+    private let _klass: NSManagedObject.Type!
     
     // Private Variable Properties
     private var __objectContext: NSManagedObjectContext?
@@ -121,11 +121,11 @@ public class SWQuerySetEvaluator: AnyObject {
     
     // Evaluation
     private var __count: Int?
-    private var __objects: [SWManagedObject]?
+    private var __objects: [NSManagedObject]?
     
     // // Functions
     // Objects (Evaluates)
-    func __objects__() -> [SWManagedObject] {
+    func __objects__() -> [NSManagedObject] {
         self._fetchObjectsIfNecessary()
         return self.__objects!
     }
@@ -281,7 +281,7 @@ private extension SWQuerySetEvaluator {
             if self.__objects == nil {
                 do {
                     print("Executing FetchRequest")
-                    try self.__objects = self.objectContext.executeFetchRequest(self._fetchRequest) as? [SWManagedObject]
+                    try self.__objects = self.objectContext.executeFetchRequest(self._fetchRequest) as? [NSManagedObject]
                 } catch let error as NSError {
                     printError(error)
                 }

@@ -10,7 +10,7 @@
 		5EEC76CF1C25A1D200FADBF0 /* Swango.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EEC76CE1C25A1D200FADBF0 /* Swango.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EEC76D61C25A1D200FADBF0 /* Swango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EEC76CB1C25A1D200FADBF0 /* Swango.framework */; };
 		5EEC76DB1C25A1D200FADBF0 /* SwangoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76DA1C25A1D200FADBF0 /* SwangoTests.swift */; };
-		5EEC76ED1C25A25E00FADBF0 /* SWManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E61C25A25E00FADBF0 /* SWManagedObject.swift */; };
+		5EEC76ED1C25A25E00FADBF0 /* NSManagedObject+SW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E61C25A25E00FADBF0 /* NSManagedObject+SW.swift */; };
 		5EEC76EE1C25A25E00FADBF0 /* SWQuerySetGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */; };
 		5EEC76EF1C25A25E00FADBF0 /* SWObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */; };
 		5EEC76F01C25A25E00FADBF0 /* SWRefinableQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */; };
@@ -37,7 +37,7 @@
 		5EEC76D51C25A1D200FADBF0 /* SwangoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwangoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEC76DA1C25A1D200FADBF0 /* SwangoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwangoTests.swift; sourceTree = "<group>"; };
 		5EEC76DC1C25A1D200FADBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EEC76E61C25A25E00FADBF0 /* SWManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWManagedObject.swift; sourceTree = "<group>"; };
+		5EEC76E61C25A25E00FADBF0 /* NSManagedObject+SW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSManagedObject+SW.swift"; path = "Classes/NSManagedObject+SW.swift"; sourceTree = "<group>"; };
 		5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQuerySetGenerator.swift; sourceTree = "<group>"; };
 		5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWObjectManager.swift; sourceTree = "<group>"; };
 		5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWRefinableQuerySet.swift; sourceTree = "<group>"; };
@@ -69,7 +69,6 @@
 		5E03A8F51C25BF0E003149CC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76E61C25A25E00FADBF0 /* SWManagedObject.swift */,
 				5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */,
 				5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */,
 				5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */,
@@ -86,6 +85,21 @@
 				5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */,
 			);
 			path = Functions;
+			sourceTree = "<group>";
+		};
+		5E03A8F71C25C17F003149CC /* QuerySetEvaluatorTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = QuerySetEvaluatorTests;
+			sourceTree = "<group>";
+		};
+		5E03A8F81C25CB93003149CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76E61C25A25E00FADBF0 /* NSManagedObject+SW.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		5EEC76C11C25A1D200FADBF0 = {
@@ -119,6 +133,7 @@
 		5EEC76D91C25A1D200FADBF0 /* SwangoTests */ = {
 			isa = PBXGroup;
 			children = (
+				5E03A8F71C25C17F003149CC /* QuerySetEvaluatorTests */,
 				5EEC76DC1C25A1D200FADBF0 /* Info.plist */,
 				5EEC76DA1C25A1D200FADBF0 /* SwangoTests.swift */,
 			);
@@ -128,6 +143,7 @@
 		5EEC76E51C25A20900FADBF0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5E03A8F81C25CB93003149CC /* Extensions */,
 				5E03A8F51C25BF0E003149CC /* Classes */,
 				5E03A8F61C25BF1C003149CC /* Functions */,
 			);
@@ -242,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EEC76ED1C25A25E00FADBF0 /* SWManagedObject.swift in Sources */,
+				5EEC76ED1C25A25E00FADBF0 /* NSManagedObject+SW.swift in Sources */,
 				5EEC76F11C25A25E00FADBF0 /* SWSlicedQuerySet.swift in Sources */,
 				5EEC76EE1C25A25E00FADBF0 /* SWQuerySetGenerator.swift in Sources */,
 				5EEC76F51C25A27F00FADBF0 /* errorPrinting.swift in Sources */,
