@@ -1,0 +1,10 @@
+PODS:
+  - Synchronized (2.0.0)
+
+DEPENDENCIES:
+  - Synchronized (~> 2.0.0)
+
+SPEC CHECKSUMS:
+  Synchronized: 576e9b6c148d49cbb5a60cbcb2a7569768f4ec79
+
+COCOAPODS: 0.37.0
