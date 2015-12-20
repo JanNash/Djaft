@@ -19,7 +19,7 @@ public class SWSlicedQuerySet: SWMetaQuerySet {
          limit: Int,
          filters: [String] = [],
          excludes: [String] = [],
-         ordeSWys: [String] = [],
+         orderBys: [String] = [],
          fetchedObjects: [NSManagedObject]? = nil) {
             
         super.init(
@@ -27,7 +27,7 @@ public class SWSlicedQuerySet: SWMetaQuerySet {
             objectContext: objectContext,
             filters: filters,
             excludes: excludes,
-            ordeSWys: ordeSWys,
+            orderBys: orderBys,
             fetchedObjects: fetchedObjects
         )
         

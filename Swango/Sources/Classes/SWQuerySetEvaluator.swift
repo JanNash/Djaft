@@ -85,7 +85,7 @@ public class SWQuerySetEvaluator: AnyObject {
          objectContext: NSManagedObjectContext? = nil,
          filters: [String] = [],
          excludes: [String] = [],
-         ordeSWys: [String] = [],
+         orderBys: [String] = [],
          fetchedObjects: [NSManagedObject]? = nil) {
             
         self._klass = klass
@@ -93,7 +93,7 @@ public class SWQuerySetEvaluator: AnyObject {
         
         self._filters = filters
         self._excludes = excludes
-        self._orderBys = ordeSWys
+        self._orderBys = orderBys
         
         self._validateFilters()
         self._validateExcludes()
@@ -243,9 +243,9 @@ private extension SWQuerySetEvaluator {
                 self.__fetchRequest!.predicate = completePredicate
                 
                 var sortDescriptors: [NSSortDescriptor] = []
-                for ordeSWy in self.orderBys {
-                    let ascending: Bool = ordeSWy[ordeSWy.startIndex] != "-"
-                    sortDescriptors.append(NSSortDescriptor(key: ordeSWy, ascending: ascending))
+                for orderBys in self.orderBys {
+                    let ascending: Bool = orderBys[orderBys.startIndex] != "-"
+                    sortDescriptors.append(NSSortDescriptor(key: orderBys, ascending: ascending))
                 }
                 
                 self.__fetchRequest!.sortDescriptors = sortDescriptors

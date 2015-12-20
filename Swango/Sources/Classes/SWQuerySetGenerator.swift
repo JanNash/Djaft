@@ -48,7 +48,7 @@ private extension SWQuerySetGenerator {
             objectContext: self.objectContext,
             filters: self.filters + params,
             excludes: self.excludes,
-            ordeSWys: self.ordeSWys
+            orderBys: self.orderBys
         )
     }
     
@@ -58,7 +58,7 @@ private extension SWQuerySetGenerator {
             objectContext: self.objectContext,
             filters: self.filters,
             excludes: self.excludes + params,
-            ordeSWys: self.ordeSWys
+            orderBys: self.orderBys
         )
     }
 }

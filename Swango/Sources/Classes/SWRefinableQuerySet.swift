@@ -51,7 +51,7 @@ private extension SWRefinableQuerySet {
                 objectContext: self.objectContext,
                 filters: self.filters,
                 excludes: self.excludes,
-                ordeSWys: self.ordeSWys
+                orderBys: self.orderBys
             )
         }
         return self.__querySetGenerator
@@ -82,7 +82,7 @@ private extension SWRefinableQuerySet {
             limit: limit,
             filters: self.filters,
             excludes: self.excludes,
-            ordeSWys: self.ordeSWys,
+            orderBys: self.orderBys,
             fetchedObjects: objects
         )
     }
