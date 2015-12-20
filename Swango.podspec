@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Swango"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "A Django-syntax CoreData-wrapper. No more messaround with NSPredicates and NSSortDescriptors!"
 
   s.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "http://EXAMPLE/Swango"
+  s.homepage     = "https://github.com/JanNash/Swango"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # s.license      = "MIT (example)"
+  s.license      = { :type => "MIT" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -53,8 +53,6 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  # s.author             = { "Jan Nash" => "jnash@jnash.de" }
-  # Or just: s.author    = "Jan Nash"
   s.authors            = { "Jan Nash" => "jnash@jnash.de" }
   s.social_media_url   = "http://twitter.com/JanPNash"
 
@@ -64,7 +62,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
+  # s.platform     = :ios
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -78,7 +76,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://www.github.com/JanNash/Swango.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/JanNash/Swango.git", :tag => "0.1.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,10 +87,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Swango/Swango/"
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
+
+  s.ios.vendored_frameworks = 'Frameworks/Swango'
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -131,7 +131,7 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "Expecta", "~> 1.0"
-  s.dependency "Synchronized", "~> 2.0.0"
+  s.dependency 'Synchronized'
+  s.dependency 'Expecta'
 
 end

@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EAACB73323ABC936666319C /* Pods_SwangoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFF6B8604B194F5E854796D /* Pods_SwangoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5BA94A37E816BE1A9A425BB1 /* Pods_Swango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B93DE33BE8936C635C6C742 /* Pods_Swango.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5EE46B781C25D44100C7CC14 /* CoreDataMockSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE46B771C25D44100C7CC14 /* CoreDataMockSetup.swift */; };
+		5EE46B7C1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EE46B7A1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodeld */; };
+		5EEC76CF1C25A1D200FADBF0 /* Swango.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EEC76CE1C25A1D200FADBF0 /* Swango.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EEC76D61C25A1D200FADBF0 /* Swango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EEC76CB1C25A1D200FADBF0 /* Swango.framework */; };
+		5EEC76DB1C25A1D200FADBF0 /* SwangoBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76DA1C25A1D200FADBF0 /* SwangoBaseTest.swift */; };
+		5EEC76ED1C25A25E00FADBF0 /* NSManagedObject+SW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E61C25A25E00FADBF0 /* NSManagedObject+SW.swift */; };
+		5EEC76EE1C25A25E00FADBF0 /* SWQuerySetGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */; };
+		5EEC76EF1C25A25E00FADBF0 /* SWObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */; };
+		5EEC76F01C25A25E00FADBF0 /* SWRefinableQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */; };
+		5EEC76F11C25A25E00FADBF0 /* SWSlicedQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EA1C25A25E00FADBF0 /* SWSlicedQuerySet.swift */; };
+		5EEC76F21C25A25E00FADBF0 /* SWQuerySetEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */; };
+		5EEC76F31C25A25E00FADBF0 /* SWMetaQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */; };
+		5EEC76F51C25A27F00FADBF0 /* errorPrinting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */; };
+		DB08278D142F3BB46BD04DA3 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC052AA637CE7A4DDAEDBEC9 /* Pods_ios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EEC76D71C25A1D200FADBF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EEC76C21C25A1D200FADBF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EEC76CA1C25A1D200FADBF0;
+			remoteInfo = Swango;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		491C306798EC327117B7B615 /* Pods-Swango.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swango.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swango/Pods-Swango.debug.xcconfig"; sourceTree = "<group>"; };
+		4B93DE33BE8936C635C6C742 /* Pods_Swango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE46B771C25D44100C7CC14 /* CoreDataMockSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataMockSetup.swift; sourceTree = "<group>"; };
+		5EE46B7B1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwangoUnitTestDataModel.xcdatamodel; sourceTree = "<group>"; };
+		5EEC76CB1C25A1D200FADBF0 /* Swango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEC76CE1C25A1D200FADBF0 /* Swango.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swango.h; sourceTree = "<group>"; };
+		5EEC76D01C25A1D200FADBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EEC76D51C25A1D200FADBF0 /* SwangoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwangoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEC76DA1C25A1D200FADBF0 /* SwangoBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwangoBaseTest.swift; sourceTree = "<group>"; };
+		5EEC76DC1C25A1D200FADBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EEC76E61C25A25E00FADBF0 /* NSManagedObject+SW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSManagedObject+SW.swift"; path = "Classes/NSManagedObject+SW.swift"; sourceTree = "<group>"; };
+		5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQuerySetGenerator.swift; sourceTree = "<group>"; };
+		5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWObjectManager.swift; sourceTree = "<group>"; };
+		5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWRefinableQuerySet.swift; sourceTree = "<group>"; };
+		5EEC76EA1C25A25E00FADBF0 /* SWSlicedQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlicedQuerySet.swift; sourceTree = "<group>"; };
+		5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQuerySetEvaluator.swift; sourceTree = "<group>"; };
+		5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMetaQuerySet.swift; sourceTree = "<group>"; };
+		5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = errorPrinting.swift; sourceTree = "<group>"; };
+		6090AB586EFD322BA0E2164D /* Pods-SwangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwangoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A7B1C5E735997CB1730D323 /* Pods-SwangoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwangoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BFF6B8604B194F5E854796D /* Pods_SwangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D461198F25B8A5450EC1FFC9 /* Pods-Swango.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swango.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swango/Pods-Swango.release.xcconfig"; sourceTree = "<group>"; };
+		FC052AA637CE7A4DDAEDBEC9 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EEC76C71C25A1D200FADBF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA94A37E816BE1A9A425BB1 /* Pods_Swango.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEC76D21C25A1D200FADBF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EEC76D61C25A1D200FADBF0 /* Swango.framework in Frameworks */,
+				4EAACB73323ABC936666319C /* Pods_SwangoTests.framework in Frameworks */,
+				DB08278D142F3BB46BD04DA3 /* Pods_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A31C0B8F01F21B62132E36F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				491C306798EC327117B7B615 /* Pods-Swango.debug.xcconfig */,
+				D461198F25B8A5450EC1FFC9 /* Pods-Swango.release.xcconfig */,
+				7A7B1C5E735997CB1730D323 /* Pods-SwangoTests.debug.xcconfig */,
+				6090AB586EFD322BA0E2164D /* Pods-SwangoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E03A8F51C25BF0E003149CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */,
+				5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */,
+				5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */,
+				5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */,
+				5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */,
+				5EEC76EA1C25A25E00FADBF0 /* SWSlicedQuerySet.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5E03A8F61C25BF1C003149CC /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		5E03A8F71C25C17F003149CC /* QuerySetEvaluatorTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = QuerySetEvaluatorTests;
+			sourceTree = "<group>";
+		};
+		5E03A8F81C25CB93003149CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76E61C25A25E00FADBF0 /* NSManagedObject+SW.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		5EE46B791C25E51A00C7CC14 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76DA1C25A1D200FADBF0 /* SwangoBaseTest.swift */,
+				5E03A8F71C25C17F003149CC /* QuerySetEvaluatorTests */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		5EEC76C11C25A1D200FADBF0 = {
+			isa = PBXGroup;
+			children = (
+				5EEC76CC1C25A1D200FADBF0 /* Products */,
+				5EEC76CD1C25A1D200FADBF0 /* Swango */,
+				5EEC76D91C25A1D200FADBF0 /* SwangoTests */,
+				1A31C0B8F01F21B62132E36F /* Pods */,
+				FE358E7178171D42AF6A27E5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5EEC76CC1C25A1D200FADBF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76CB1C25A1D200FADBF0 /* Swango.framework */,
+				5EEC76D51C25A1D200FADBF0 /* SwangoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EEC76CD1C25A1D200FADBF0 /* Swango */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC76E51C25A20900FADBF0 /* Sources */,
+				5EEC76D01C25A1D200FADBF0 /* Info.plist */,
+				5EEC76CE1C25A1D200FADBF0 /* Swango.h */,
+			);
+			path = Swango;
+			sourceTree = "<group>";
+		};
+		5EEC76D91C25A1D200FADBF0 /* SwangoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EE46B791C25E51A00C7CC14 /* Tests */,
+				5EEC76DC1C25A1D200FADBF0 /* Info.plist */,
+				5EE46B771C25D44100C7CC14 /* CoreDataMockSetup.swift */,
+				5EE46B7A1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodeld */,
+			);
+			path = SwangoTests;
+			sourceTree = "<group>";
+		};
+		5EEC76E51C25A20900FADBF0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5E03A8F81C25CB93003149CC /* Extensions */,
+				5E03A8F51C25BF0E003149CC /* Classes */,
+				5E03A8F61C25BF1C003149CC /* Functions */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FE358E7178171D42AF6A27E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B93DE33BE8936C635C6C742 /* Pods_Swango.framework */,
+				7BFF6B8604B194F5E854796D /* Pods_SwangoTests.framework */,
+				FC052AA637CE7A4DDAEDBEC9 /* Pods_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5EEC76C81C25A1D200FADBF0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EEC76CF1C25A1D200FADBF0 /* Swango.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5EEC76CA1C25A1D200FADBF0 /* Swango */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EEC76DF1C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "Swango" */;
+			buildPhases = (
+				6BD03B0865F4165B77199DF7 /* Check Pods Manifest.lock */,
+				5EEC76C61C25A1D200FADBF0 /* Sources */,
+				5EEC76C71C25A1D200FADBF0 /* Frameworks */,
+				5EEC76C81C25A1D200FADBF0 /* Headers */,
+				5EEC76C91C25A1D200FADBF0 /* Resources */,
+				7C8EB5774798647BDCD78D78 /* Embed Pods Frameworks */,
+				3C728FE897EB7D13D60A5FC1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swango;
+			productName = Swango;
+			productReference = 5EEC76CB1C25A1D200FADBF0 /* Swango.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5EEC76D41C25A1D200FADBF0 /* SwangoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EEC76E21C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "SwangoTests" */;
+			buildPhases = (
+				F6A4F8EE274888C6E366A823 /* Check Pods Manifest.lock */,
+				5EEC76D11C25A1D200FADBF0 /* Sources */,
+				5EEC76D21C25A1D200FADBF0 /* Frameworks */,
+				5EEC76D31C25A1D200FADBF0 /* Resources */,
+				89FCEDFA90AD490EC3B11479 /* Embed Pods Frameworks */,
+				0B505408EE1E85BBF44BE68D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EEC76D81C25A1D200FADBF0 /* PBXTargetDependency */,
+			);
+			name = SwangoTests;
+			productName = SwangoTests;
+			productReference = 5EEC76D51C25A1D200FADBF0 /* SwangoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EEC76C21C25A1D200FADBF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jan Nash";
+				TargetAttributes = {
+					5EEC76CA1C25A1D200FADBF0 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					5EEC76D41C25A1D200FADBF0 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 5EEC76C51C25A1D200FADBF0 /* Build configuration list for PBXProject "Swango" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5EEC76C11C25A1D200FADBF0;
+			productRefGroup = 5EEC76CC1C25A1D200FADBF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EEC76CA1C25A1D200FADBF0 /* Swango */,
+				5EEC76D41C25A1D200FADBF0 /* SwangoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EEC76C91C25A1D200FADBF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEC76D31C25A1D200FADBF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B505408EE1E85BBF44BE68D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C728FE897EB7D13D60A5FC1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swango/Pods-Swango-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BD03B0865F4165B77199DF7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C8EB5774798647BDCD78D78 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swango/Pods-Swango-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89FCEDFA90AD490EC3B11479 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios/Pods-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A4F8EE274888C6E366A823 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EEC76C61C25A1D200FADBF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EEC76ED1C25A25E00FADBF0 /* NSManagedObject+SW.swift in Sources */,
+				5EEC76F11C25A25E00FADBF0 /* SWSlicedQuerySet.swift in Sources */,
+				5EEC76EE1C25A25E00FADBF0 /* SWQuerySetGenerator.swift in Sources */,
+				5EEC76F51C25A27F00FADBF0 /* errorPrinting.swift in Sources */,
+				5EEC76F21C25A25E00FADBF0 /* SWQuerySetEvaluator.swift in Sources */,
+				5EEC76F31C25A25E00FADBF0 /* SWMetaQuerySet.swift in Sources */,
+				5EEC76F01C25A25E00FADBF0 /* SWRefinableQuerySet.swift in Sources */,
+				5EEC76EF1C25A25E00FADBF0 /* SWObjectManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEC76D11C25A1D200FADBF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE46B781C25D44100C7CC14 /* CoreDataMockSetup.swift in Sources */,
+				5EEC76DB1C25A1D200FADBF0 /* SwangoBaseTest.swift in Sources */,
+				5EE46B7C1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EEC76D81C25A1D200FADBF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EEC76CA1C25A1D200FADBF0 /* Swango */;
+			targetProxy = 5EEC76D71C25A1D200FADBF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5EEC76DD1C25A1D200FADBF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5EEC76DE1C25A1D200FADBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5EEC76E01C25A1D200FADBF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 491C306798EC327117B7B615 /* Pods-Swango.debug.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Swango/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jannash.Swango;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5EEC76E11C25A1D200FADBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D461198F25B8A5450EC1FFC9 /* Pods-Swango.release.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Swango/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jannash.Swango;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5EEC76E31C25A1D200FADBF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A7B1C5E735997CB1730D323 /* Pods-SwangoTests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = SwangoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jannash.SwangoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5EEC76E41C25A1D200FADBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6090AB586EFD322BA0E2164D /* Pods-SwangoTests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = SwangoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jannash.SwangoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EEC76C51C25A1D200FADBF0 /* Build configuration list for PBXProject "Swango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEC76DD1C25A1D200FADBF0 /* Debug */,
+				5EEC76DE1C25A1D200FADBF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EEC76DF1C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "Swango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEC76E01C25A1D200FADBF0 /* Debug */,
+				5EEC76E11C25A1D200FADBF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EEC76E21C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "SwangoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEC76E31C25A1D200FADBF0 /* Debug */,
+				5EEC76E41C25A1D200FADBF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5EE46B7A1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5EE46B7B1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodel */,
+			);
+			currentVersion = 5EE46B7B1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodel */;
+			path = SwangoUnitTestDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5EEC76C21C25A1D200FADBF0 /* Project object */;
+}

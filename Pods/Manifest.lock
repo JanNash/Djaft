@@ -1,0 +1,13 @@
+PODS:
+  - Expecta (1.0.5)
+  - Synchronized (2.0.0)
+
+DEPENDENCIES:
+  - Expecta
+  - Synchronized
+
+SPEC CHECKSUMS:
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Synchronized: 576e9b6c148d49cbb5a60cbcb2a7569768f4ec79
+
+COCOAPODS: 0.37.0
