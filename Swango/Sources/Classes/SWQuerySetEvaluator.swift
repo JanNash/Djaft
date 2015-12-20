@@ -82,9 +82,9 @@ internal extension SWQuerySetEvaluator {
     
     // // Functions
     // Objects (Evaluates)
-    internal func __objects__() -> [NSManagedObject] {
+    internal func __objects__<T: NSManagedObject>() -> [T] {
         self._fetchObjectsIfNecessary()
-        return self.__objects!
+        return self.__objects! as! [T]
     }
     
     // Count (Only Gets Count)
