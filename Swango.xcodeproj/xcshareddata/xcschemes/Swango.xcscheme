@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "15BE0A1DA9168A801A975C3D"
+               BlueprintIdentifier = "98EEF85C97A69393065BA1E1"
                BuildableName = "Pods_Swango.framework"
                BlueprintName = "Pods-Swango"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE8835E2964942A668EC2C2F"
+               BlueprintIdentifier = "A6D92FBDF8721EAABF2F08FC"
                BuildableName = "Pods_SwangoTests.framework"
                BlueprintName = "Pods-SwangoTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

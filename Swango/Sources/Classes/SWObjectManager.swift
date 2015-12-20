@@ -36,6 +36,19 @@ public extension SWObjectManager {
 
 // MARK: Main Implementation
 public class SWObjectManager: SWQuerySetGenerator {
+    // Initialization Override
+    override init(withClass klass: NSManagedObject.Type,
+        objectContext: NSManagedObjectContext? = nil,
+        filters: [String] = [],
+        excludes: [String] = [],
+        orderBys: [String]? = nil,
+        fetchedObjects: [NSManagedObject]? = nil) {
+            super.init(
+                withClass: klass,
+                objectContext: SWObjectManager.defaultObjectContext
+            )
+    }
+    
     // Private Static Variable Properties
     private static var __defaultObjectContext: NSManagedObjectContext!
 }
@@ -75,7 +88,10 @@ private extension SWObjectManager {
 // MARK: Basic Queries
 private extension SWObjectManager {
     private func _all() -> SWRefinableQuerySet {
-        return SWRefinableQuerySet(withClass: self.klass, objectContext: self.objectContext)
+        return SWRefinableQuerySet(
+            withClass: self.klass,
+            objectContext: self.objectContext
+        )
     }
 }
 

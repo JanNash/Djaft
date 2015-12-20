@@ -11,7 +11,7 @@ import CoreData
 
 
 // MARK: Public Interface
-public extension SWQuerySetGenerator {
+public class SWQuerySetGenerator: SWQuerySetEvaluator {
     // QuerySet Generation
     public func filter(firstPredicate: String, _ otherPredicates: String...) -> SWRefinableQuerySet {
         return self._filter([firstPredicate] + otherPredicates)
@@ -20,46 +20,68 @@ public extension SWQuerySetGenerator {
     public func exclude(firstPredicate: String, _ otherPredicates: String...) -> SWRefinableQuerySet {
         return self._exclude([firstPredicate] + otherPredicates)
     }
+
 }
 
 
-// MARK: Compositing Class Interface (No splatting possible yet in Swift...)
-extension SWQuerySetGenerator {
-    // QuerySet Generation
-    func __filter__(params: [String]) -> SWRefinableQuerySet {
+// MARK: Internal Interface
+internal extension SWQuerySetGenerator {
+    // Basic QuerySet Generation
+    internal func __createRefinableQuerySet__(
+        withNewFilters newFilters: [String] = [],
+        withNewExcludes newExcludes: [String] = [],
+        withNewOrderBys newOrderBys: [String] = []) -> SWRefinableQuerySet {
+            return self._createRefinableQuerySet(
+                withNewFilters: newFilters,
+                withNewExcludes: newExcludes,
+                withNewOrderBys: newOrderBys
+            )
+    }
+    
+    // Refined QuerySet Generation
+    internal func __filter__(params: [String]) -> SWRefinableQuerySet {
         return self._filter(params)
     }
     
-    func __exclude__(params: [String]) -> SWRefinableQuerySet {
+    internal func __exclude__(params: [String]) -> SWRefinableQuerySet {
         return self._exclude(params)
+    }
+    
+    internal func __orderBy__(params: [String]) -> SWRefinableQuerySet {
+        return self._orderBy(params)
     }
 }
 
 
-// MARK: Main Implementation
-public class SWQuerySetGenerator: SWQuerySetEvaluator {}
+// MARK: Basic QuerySet Generation
+private extension SWQuerySetGenerator {
+    private func _createRefinableQuerySet(
+        withNewFilters newFilters: [String] = [],
+        withNewExcludes newExcludes: [String] = [],
+        withNewOrderBys newOrderBys: [String] = []) -> SWRefinableQuerySet {
+            return SWRefinableQuerySet(
+                withClass: self.klass,
+                objectContext: self.objectContext,
+                filters: self.filters + newFilters,
+                excludes: self.excludes + newExcludes,
+                orderBys: self.orderBys + newOrderBys
+            )
+    }
+}
 
 
-// MARK: QuerySet Generation
+// Refined QuerySet Generation
 private extension SWQuerySetGenerator {
     private func _filter(params: [String]) -> SWRefinableQuerySet {
-        return SWRefinableQuerySet(
-            withClass: self.klass,
-            objectContext: self.objectContext,
-            filters: self.filters + params,
-            excludes: self.excludes,
-            orderBys: self.orderBys
-        )
+        return self._createRefinableQuerySet(withNewFilters: params)
     }
     
     private func _exclude(params: [String]) -> SWRefinableQuerySet {
-        return SWRefinableQuerySet(
-            withClass: self.klass,
-            objectContext: self.objectContext,
-            filters: self.filters,
-            excludes: self.excludes + params,
-            orderBys: self.orderBys
-        )
+        return self._createRefinableQuerySet(withNewExcludes: params)
+    }
+    
+    private func _orderBy(params: [String]) -> SWRefinableQuerySet {
+        return self._createRefinableQuerySet(withNewOrderBys: params)
     }
 }
 

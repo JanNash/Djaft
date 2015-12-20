@@ -17,6 +17,12 @@ public extension NSManagedObject {
         return self._objectManager
     }
     
+    // Class Default Properties
+    public static var defaultOrderBys: [String] {
+        get              {return self._defaultOrderBys}
+        set(newOrderBys) {self._defaultOrderBys = newOrderBys}
+    }
+    
     // Instance Functions
     public func save() {
         self._save()
@@ -28,6 +34,9 @@ public extension NSManagedObject {
 private extension NSManagedObject {
     // Object Manager
     private static var __objectManager: SWObjectManager!
+    
+    // Ordering
+    private static var _defaultOrderBys: [String] = []
     
     // Property Names (For giving better error messages on erratic predicate strings)
     private static var __propertyNames: [String]!

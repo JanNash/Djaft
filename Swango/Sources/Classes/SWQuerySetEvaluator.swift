@@ -57,7 +57,7 @@ public extension SWQuerySetEvaluator {
     }
     
     public var orderBys: [String] {
-        get {return self._orderBys}
+        get {return self._orderBys ?? self.klass.defaultOrderBys}
     }
     
     // // Functions
@@ -81,11 +81,11 @@ public extension SWQuerySetEvaluator {
 // MARK: Main Implementation
 public class SWQuerySetEvaluator: AnyObject {
     // Initialization
-    init(withClass klass: NSManagedObject.Type,
+    internal init(withClass klass: NSManagedObject.Type,
          objectContext: NSManagedObjectContext? = nil,
          filters: [String] = [],
          excludes: [String] = [],
-         orderBys: [String] = [],
+         orderBys: [String]? = nil,
          fetchedObjects: [NSManagedObject]? = nil) {
             
         self._klass = klass
@@ -97,7 +97,7 @@ public class SWQuerySetEvaluator: AnyObject {
         
         self._validateFilters()
         self._validateExcludes()
-        self._validateOrdeSWys()
+        self._validateOrderBys()
         
         self.__objects = fetchedObjects
         self.__count = fetchedObjects?.count
@@ -107,7 +107,7 @@ public class SWQuerySetEvaluator: AnyObject {
     private let _klass: NSManagedObject.Type!
     
     // Private Variable Properties
-    private var __objectContext: NSManagedObjectContext?
+    private var __objectContext: NSManagedObjectContext!
     private var __fetchRequest: NSFetchRequest?
     
     // Fetch Properties
@@ -117,7 +117,7 @@ public class SWQuerySetEvaluator: AnyObject {
     // Variable
     private var _filters: [String]
     private var _excludes: [String]
-    private var _orderBys: [String]
+    private var _orderBys: [String]?
     
     // Evaluation
     private var __count: Int?
@@ -125,13 +125,13 @@ public class SWQuerySetEvaluator: AnyObject {
     
     // // Functions
     // Objects (Evaluates)
-    func __objects__() -> [NSManagedObject] {
+    internal func __objects__() -> [NSManagedObject] {
         self._fetchObjectsIfNecessary()
         return self.__objects!
     }
     
     // Count (Only Gets Count)
-    func __count__() -> Int {
+    internal func __count__() -> Int {
         self._getCountIfNecessary()
         return self.__count!
     }
@@ -144,16 +144,8 @@ public class SWQuerySetEvaluator: AnyObject {
 private extension SWQuerySetEvaluator {
     // Object Context
     private var _objectContext: NSManagedObjectContext {
-        get {
-            if self.__objectContext != nil {
-                return self.__objectContext!
-            } else {
-                return SWObjectManager.defaultObjectContext
-            }
-        }
-        set(newContext) {
-            self.__objectContext = newContext
-        }
+        get             {return self.__objectContext}
+        set(newContext) {self.__objectContext = newContext}
     }
     
     // Class Name
@@ -206,7 +198,7 @@ private extension SWQuerySetEvaluator {
         
     }
     
-    private func _validateOrdeSWys() {
+    private func _validateOrderBys() {
         
     }
     
