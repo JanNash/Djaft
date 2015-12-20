@@ -28,7 +28,7 @@ public extension SWObjectManager {
     }
     
     // Basic Queries
-    public func all() -> SWRefinableQuerySet {
+    public func all() -> SWFinalQuerySet {
         return self._all()
     }
     
@@ -115,8 +115,8 @@ private extension SWObjectManager {
 
 // MARK: Basic Queries
 private extension SWObjectManager {
-    private func _all() -> SWRefinableQuerySet {
-        return SWRefinableQuerySet(
+    private func _all() -> SWFinalQuerySet {
+        return SWFinalQuerySet(
             withClass: self.klass,
             objectContext: self.objectContext
         )

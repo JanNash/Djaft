@@ -16,7 +16,7 @@
 		5EEC76EE1C25A25E00FADBF0 /* SWQuerySetGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */; };
 		5EEC76EF1C25A25E00FADBF0 /* SWObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */; };
 		5EEC76F01C25A25E00FADBF0 /* SWRefinableQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */; };
-		5EEC76F11C25A25E00FADBF0 /* SWSlicedQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EA1C25A25E00FADBF0 /* SWSlicedQuerySet.swift */; };
+		5EEC76F11C25A25E00FADBF0 /* SWFinalQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EA1C25A25E00FADBF0 /* SWFinalQuerySet.swift */; };
 		5EEC76F21C25A25E00FADBF0 /* SWQuerySetEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */; };
 		5EEC76F31C25A25E00FADBF0 /* SWMetaQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */; };
 		5EEC76F51C25A27F00FADBF0 /* errorPrinting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */; };
@@ -49,7 +49,7 @@
 		5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQuerySetGenerator.swift; sourceTree = "<group>"; };
 		5EEC76E81C25A25E00FADBF0 /* SWObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWObjectManager.swift; sourceTree = "<group>"; };
 		5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWRefinableQuerySet.swift; sourceTree = "<group>"; };
-		5EEC76EA1C25A25E00FADBF0 /* SWSlicedQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSlicedQuerySet.swift; sourceTree = "<group>"; };
+		5EEC76EA1C25A25E00FADBF0 /* SWFinalQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWFinalQuerySet.swift; sourceTree = "<group>"; };
 		5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQuerySetEvaluator.swift; sourceTree = "<group>"; };
 		5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMetaQuerySet.swift; sourceTree = "<group>"; };
 		5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = errorPrinting.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 				5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */,
 				5EEC76E71C25A25E00FADBF0 /* SWQuerySetGenerator.swift */,
 				5EEC76E91C25A25E00FADBF0 /* SWRefinableQuerySet.swift */,
-				5EEC76EA1C25A25E00FADBF0 /* SWSlicedQuerySet.swift */,
+				5EEC76EA1C25A25E00FADBF0 /* SWFinalQuerySet.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -404,7 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EEC76ED1C25A25E00FADBF0 /* NSManagedObject+SW.swift in Sources */,
-				5EEC76F11C25A25E00FADBF0 /* SWSlicedQuerySet.swift in Sources */,
+				5EEC76F11C25A25E00FADBF0 /* SWFinalQuerySet.swift in Sources */,
 				5EEC76EE1C25A25E00FADBF0 /* SWQuerySetGenerator.swift in Sources */,
 				5EEC76F51C25A27F00FADBF0 /* errorPrinting.swift in Sources */,
 				5EEC76F21C25A25E00FADBF0 /* SWQuerySetEvaluator.swift in Sources */,

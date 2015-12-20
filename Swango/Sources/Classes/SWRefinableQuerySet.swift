@@ -15,7 +15,7 @@ import CoreData
 public extension SWRefinableQuerySet {
     // Get Sliced QuerySet
     // (Does not evaluate, returns SWFinalQuerySet that does not allow more refinements)
-    public subscript(startIndex: Int, endIndex: Int) -> SWSlicedQuerySet {
+    public subscript(startIndex: Int, endIndex: Int) -> SWFinalQuerySet {
         return self._getSlicedQuerySet(startIndex, endIndex: endIndex)
     }
     
@@ -65,7 +65,7 @@ private extension SWRefinableQuerySet {
 
 // MARK: Get Sliced QuerySet
 private extension SWRefinableQuerySet {
-    private func _getSlicedQuerySet(startIndex: Int, endIndex: Int) -> SWSlicedQuerySet {
+    private func _getSlicedQuerySet(startIndex: Int, endIndex: Int) -> SWFinalQuerySet {
         var objects: [NSManagedObject]?
         if self.isFetched {
             objects = self.__objects__()
@@ -79,7 +79,7 @@ private extension SWRefinableQuerySet {
             limit = 0
         }
         
-        return SWSlicedQuerySet(
+        return SWFinalQuerySet(
             withClass: self.klass,
             objectContext: self.objectContext,
             offset: startIndex,
