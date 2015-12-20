@@ -20,16 +20,6 @@ public extension SWQuerySetEvaluator {
         set(newContext) {self._objectContext = newContext}
     }
     
-    // // // Variable Readonly Properties
-    // // Class Information
-    public var klass: NSManagedObject.Type {
-        get {return self._klass}
-    }
-    
-    public var className: String {
-        get {return self._className}
-    }
-    
     // Evaluation State
     public var isCounted: Bool {
         get {return self._isCounted}
@@ -78,6 +68,33 @@ public extension SWQuerySetEvaluator {
 }
 
 
+// MARK: Internal Interface
+internal extension SWQuerySetEvaluator {
+    // // // Variable Readonly Properties
+    // // Class Information
+    internal var klass: NSManagedObject.Type {
+        get {return self._klass}
+    }
+    
+    internal var className: String {
+        get {return self._className}
+    }
+    
+    // // Functions
+    // Objects (Evaluates)
+    internal func __objects__() -> [NSManagedObject] {
+        self._fetchObjectsIfNecessary()
+        return self.__objects!
+    }
+    
+    // Count (Only Gets Count)
+    internal func __count__() -> Int {
+        self._getCountIfNecessary()
+        return self.__count!
+    }
+}
+
+
 // MARK: Main Implementation
 public class SWQuerySetEvaluator: AnyObject {
     // Initialization
@@ -122,19 +139,6 @@ public class SWQuerySetEvaluator: AnyObject {
     // Evaluation
     private var __count: Int?
     private var __objects: [NSManagedObject]?
-    
-    // // Functions
-    // Objects (Evaluates)
-    internal func __objects__() -> [NSManagedObject] {
-        self._fetchObjectsIfNecessary()
-        return self.__objects!
-    }
-    
-    // Count (Only Gets Count)
-    internal func __count__() -> Int {
-        self._getCountIfNecessary()
-        return self.__count!
-    }
 }
 
 

@@ -31,13 +31,26 @@ public extension SWObjectManager {
     public func all() -> SWRefinableQuerySet {
         return self._all()
     }
+    
+    // QuerySet Generation
+    public func filter(params: String...) -> SWRefinableQuerySet {
+        return self._querySetGenerator.__filter__(params)
+    }
+    
+    public func exclude(params: String...) -> SWRefinableQuerySet {
+        return self._querySetGenerator.__exclude__(params)
+    }
+    
+    public func orderBy(params: String...) -> SWRefinableQuerySet {
+        return self._querySetGenerator.__orderBy__(params)
+    }
 }
 
 
 // MARK: Main Implementation
-public class SWObjectManager: SWQuerySetGenerator {
+public class SWObjectManager: SWQuerySetEvaluator {
     // Initialization Override
-    override init(withClass klass: NSManagedObject.Type,
+    internal override init(withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         filters: [String] = [],
         excludes: [String] = [],
@@ -51,6 +64,8 @@ public class SWObjectManager: SWQuerySetGenerator {
     
     // Private Static Variable Properties
     private static var __defaultObjectContext: NSManagedObjectContext!
+    
+    private var __querySetGenerator: SWQuerySetGenerator!
 }
 
 
@@ -68,6 +83,19 @@ private extension SWObjectManager {
         set(newContext) {
             self.__defaultObjectContext = newContext
         }
+    }
+    
+    private var _querySetGenerator: SWQuerySetGenerator {
+        if self.__querySetGenerator == nil {
+            self.__querySetGenerator = SWQuerySetGenerator(
+                withClass: self.klass,
+                objectContext: self.objectContext,
+                filters: self.filters,
+                excludes: self.excludes,
+                orderBys: self.orderBys
+            )
+        }
+        return self.__querySetGenerator
     }
 }
 

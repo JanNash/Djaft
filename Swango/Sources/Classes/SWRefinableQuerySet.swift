@@ -33,6 +33,10 @@ public extension SWRefinableQuerySet {
     public func exclude(params: String...) -> SWRefinableQuerySet {
         return self._querySetGenerator.__exclude__(params)
     }
+    
+    public func orderBy(params: String...) -> SWRefinableQuerySet {
+        return self._querySetGenerator.__orderBy__(params)
+    }
 }
 
 

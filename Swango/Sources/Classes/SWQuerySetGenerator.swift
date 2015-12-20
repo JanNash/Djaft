@@ -10,22 +10,8 @@ import Foundation
 import CoreData
 
 
-// MARK: Public Interface
-public class SWQuerySetGenerator: SWQuerySetEvaluator {
-    // QuerySet Generation
-    public func filter(firstPredicate: String, _ otherPredicates: String...) -> SWRefinableQuerySet {
-        return self._filter([firstPredicate] + otherPredicates)
-    }
-    
-    public func exclude(firstPredicate: String, _ otherPredicates: String...) -> SWRefinableQuerySet {
-        return self._exclude([firstPredicate] + otherPredicates)
-    }
-
-}
-
-
 // MARK: Internal Interface
-internal extension SWQuerySetGenerator {
+internal class SWQuerySetGenerator: SWQuerySetEvaluator {
     // Basic QuerySet Generation
     internal func __createRefinableQuerySet__(
         withNewFilters newFilters: [String] = [],
