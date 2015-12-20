@@ -32,11 +32,9 @@ class CoreDataMockSetup: AnyObject {
         let modelURL = bundle.URLForResource("SwangoUnitTestDataModel", withExtension: "momd")
         let mom = NSManagedObjectModel(contentsOfURL: modelURL!)
         let psc = NSPersistentStoreCoordinator(managedObjectModel: mom!)
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        let storeURL = urls.last?.URLByAppendingPathComponent("SwangoUnitTestDB.sqlite")
         
         do {
-            try psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil)
+            try psc.addPersistentStoreWithType(NSInMemoryStoreType, configuration: nil, URL: nil, options: nil)
         } catch let error as NSError {
             fatalError("Failed setting up Database with error \(error)")
         }
