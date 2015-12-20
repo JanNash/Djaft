@@ -4,13 +4,8 @@ xcode_project: Swango.xcodeproj
 xcode_scheme: Swango
 xcode_sdk: iphonesimulator9.2
 cache:
-  - bundler
   - cocoapods
 
-rvm: 2.2.2
-install:
-    - bundle install
-    - bundle exec pod install
 branches:
   only:
     - master
