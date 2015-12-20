@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-//import Synchronized
+import Synchronized
 
 
 // MARK: Public Interface
@@ -171,10 +171,10 @@ private extension SWQuerySetEvaluator {
 // MARK: Force Evaluate
 private extension SWQuerySetEvaluator {
     private func _evaluate() {
-//        synchronized(self) {
+        synchronized(self) {
             self._fetchObjectsIfNecessary()
             self.__count = self.__objects!.count
-//        }
+        }
     }
 }
 
@@ -182,10 +182,10 @@ private extension SWQuerySetEvaluator {
 // MARK: Reset
 private extension SWQuerySetEvaluator {
     private func _reset() {
-//        synchronized(self) {
+        synchronized(self) {
             self.__objects = nil
             self.__count = nil
-//        }
+        }
     }
 }
 
@@ -211,7 +211,7 @@ private extension SWQuerySetEvaluator {
 // MARK: Construct FetchRequest
 private extension SWQuerySetEvaluator {
     private var _fetchRequest: NSFetchRequest {
-//        synchronized(self) {
+        synchronized(self) {
             if self.__fetchRequest == nil {
                 self.__fetchRequest = NSFetchRequest(entityName: self._className)
                 self.__fetchRequest!.fetchOffset = self.offset
@@ -246,7 +246,7 @@ private extension SWQuerySetEvaluator {
                 
                 self.__fetchRequest!.sortDescriptors = sortDescriptors
             }
-//        }
+        }
         return self.__fetchRequest!
     }
 }
@@ -255,7 +255,7 @@ private extension SWQuerySetEvaluator {
 // MARK: Get Objects / Get Count
 private extension SWQuerySetEvaluator {
     private func _getCountIfNecessary() {
-//        synchronized(self) {
+        synchronized(self) {
             if self.__count == nil {
                 if self.__objects != nil {
                     self.__count = self.__objects!.count
@@ -267,11 +267,11 @@ private extension SWQuerySetEvaluator {
                     }
                 }
             }
-//        }
+        }
     }
     
     private func _fetchObjectsIfNecessary() {
-//        synchronized(self) {
+        synchronized(self) {
             if self.__objects == nil {
                 do {
                     try self.__objects = self.objectContext.executeFetchRequest(self._fetchRequest) as? [NSManagedObject]
@@ -279,7 +279,7 @@ private extension SWQuerySetEvaluator {
                     printError(error)
                 }
             }
-//        }
+        }
     }
 }
 
