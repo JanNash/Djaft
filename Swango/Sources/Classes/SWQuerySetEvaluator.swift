@@ -56,8 +56,8 @@ public extension SWQuerySetEvaluator {
         get {return self._excludes}
     }
     
-    public var ordeSWys: [String] {
-        get {return self._ordeSWys}
+    public var orderBys: [String] {
+        get {return self._orderBys}
     }
     
     // // Functions
@@ -93,7 +93,7 @@ public class SWQuerySetEvaluator: AnyObject {
         
         self._filters = filters
         self._excludes = excludes
-        self._ordeSWys = ordeSWys
+        self._orderBys = ordeSWys
         
         self._validateFilters()
         self._validateExcludes()
@@ -117,7 +117,7 @@ public class SWQuerySetEvaluator: AnyObject {
     // Variable
     private var _filters: [String]
     private var _excludes: [String]
-    private var _ordeSWys: [String]
+    private var _orderBys: [String]
     
     // Evaluation
     private var __count: Int?
@@ -243,7 +243,7 @@ private extension SWQuerySetEvaluator {
                 self.__fetchRequest!.predicate = completePredicate
                 
                 var sortDescriptors: [NSSortDescriptor] = []
-                for ordeSWy in self.ordeSWys {
+                for ordeSWy in self.orderBys {
                     let ascending: Bool = ordeSWy[ordeSWy.startIndex] != "-"
                     sortDescriptors.append(NSSortDescriptor(key: ordeSWy, ascending: ascending))
                 }
