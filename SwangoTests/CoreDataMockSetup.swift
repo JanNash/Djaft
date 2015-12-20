@@ -6,28 +6,20 @@
 //  Copyright © 2015 Jan Nash. All rights reserved.
 //
 
-import Foundation
 import CoreData
 
 
-// Public Interface
-extension CoreDataMockSetup {
-    // Variable Class Properties
-    class func mainObjectContext() -> NSManagedObjectContext {return self._mainObjectContext}
+// Internal Interface
+internal extension CoreDataMockSetup {
+    internal class func createObjectContext() -> NSManagedObjectContext {
+        return self._createObjectContext()
+    }
 }
 
 
 // Main Implementation
-class CoreDataMockSetup: AnyObject {
-    private static var __mainObjectContext: NSManagedObjectContext!
-    private static var _mainObjectContext: NSManagedObjectContext {
-        if self.__mainObjectContext == nil {
-            self._createMainMOC()
-        }
-     return self.__mainObjectContext
-    }
-    
-    private class func _createMainMOC() {
+internal class CoreDataMockSetup: AnyObject {
+    private class func _createObjectContext() -> NSManagedObjectContext {
         let bundle: NSBundle = NSBundle(forClass: self)
         let modelURL = bundle.URLForResource("SwangoUnitTestDataModel", withExtension: "momd")
         let mom = NSManagedObjectModel(contentsOfURL: modelURL!)
@@ -36,11 +28,12 @@ class CoreDataMockSetup: AnyObject {
         do {
             try psc.addPersistentStoreWithType(NSInMemoryStoreType, configuration: nil, URL: nil, options: nil)
         } catch let error as NSError {
-            fatalError("Failed setting up Database with error \(error)")
+            fatalError("Failed setting up Test-database with error \(error)")
         }
         
-        self.__mainObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
-        self.__mainObjectContext!.persistentStoreCoordinator = psc
-        print("Successfully set up Swango unit-test database")
+        let objectContext: NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        objectContext.persistentStoreCoordinator = psc
+        
+        return objectContext
     }
 }
