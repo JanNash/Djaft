@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         		= "Swango"
-  s.version      		= "0.1.0"
+  s.version      		= "0.1.1"
   s.summary      		= "A Django-syntax CoreData-wrapper. No more messaround with NSPredicates and NSSortDescriptors!"
 
   s.description  		= <<-DESC
