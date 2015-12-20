@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EAACB73323ABC936666319C /* Pods_SwangoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFF6B8604B194F5E854796D /* Pods_SwangoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		5BA94A37E816BE1A9A425BB1 /* Pods_Swango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B93DE33BE8936C635C6C742 /* Pods_Swango.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5EE46B781C25D44100C7CC14 /* CoreDataMockSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE46B771C25D44100C7CC14 /* CoreDataMockSetup.swift */; };
 		5EE46B7C1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EE46B7A1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodeld */; };
 		5EEC76CF1C25A1D200FADBF0 /* Swango.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EEC76CE1C25A1D200FADBF0 /* Swango.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,7 +20,8 @@
 		5EEC76F21C25A25E00FADBF0 /* SWQuerySetEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */; };
 		5EEC76F31C25A25E00FADBF0 /* SWMetaQuerySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */; };
 		5EEC76F51C25A27F00FADBF0 /* errorPrinting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */; };
-		DB08278D142F3BB46BD04DA3 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC052AA637CE7A4DDAEDBEC9 /* Pods_ios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D0DE969CE2AFDBA1DCF96D01 /* Pods_SwangoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9282B3EFAC921ACBFC0468 /* Pods_SwangoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D77556EBD5460D4A75F44411 /* Pods_Swango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECEFB8E04E6BC626D7CD481 /* Pods_Swango.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		491C306798EC327117B7B615 /* Pods-Swango.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swango.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swango/Pods-Swango.debug.xcconfig"; sourceTree = "<group>"; };
-		4B93DE33BE8936C635C6C742 /* Pods_Swango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4441CD0AF8171EF93043F0B7 /* Pods-SwangoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwangoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E27FBDC55D58B04B84D62AC /* Pods-Swango.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swango.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swango/Pods-Swango.release.xcconfig"; sourceTree = "<group>"; };
 		5EE46B771C25D44100C7CC14 /* CoreDataMockSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataMockSetup.swift; sourceTree = "<group>"; };
 		5EE46B7B1C25E5B500C7CC14 /* SwangoUnitTestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwangoUnitTestDataModel.xcdatamodel; sourceTree = "<group>"; };
 		5EEC76CB1C25A1D200FADBF0 /* Swango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,11 +53,10 @@
 		5EEC76EB1C25A25E00FADBF0 /* SWQuerySetEvaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQuerySetEvaluator.swift; sourceTree = "<group>"; };
 		5EEC76EC1C25A25E00FADBF0 /* SWMetaQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMetaQuerySet.swift; sourceTree = "<group>"; };
 		5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = errorPrinting.swift; sourceTree = "<group>"; };
-		6090AB586EFD322BA0E2164D /* Pods-SwangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwangoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests.release.xcconfig"; sourceTree = "<group>"; };
-		7A7B1C5E735997CB1730D323 /* Pods-SwangoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwangoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7BFF6B8604B194F5E854796D /* Pods_SwangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D461198F25B8A5450EC1FFC9 /* Pods-Swango.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swango.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swango/Pods-Swango.release.xcconfig"; sourceTree = "<group>"; };
-		FC052AA637CE7A4DDAEDBEC9 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9282B3EFAC921ACBFC0468 /* Pods_SwangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECEFB8E04E6BC626D7CD481 /* Pods_Swango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E4282F75554E66FCE6A3E5 /* Pods-Swango.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swango.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swango/Pods-Swango.debug.xcconfig"; sourceTree = "<group>"; };
+		F7D666F01D9D8FFB9DE8CC9B /* Pods-SwangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwangoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BA94A37E816BE1A9A425BB1 /* Pods_Swango.framework in Frameworks */,
+				D77556EBD5460D4A75F44411 /* Pods_Swango.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,23 +73,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EEC76D61C25A1D200FADBF0 /* Swango.framework in Frameworks */,
-				4EAACB73323ABC936666319C /* Pods_SwangoTests.framework in Frameworks */,
-				DB08278D142F3BB46BD04DA3 /* Pods_ios.framework in Frameworks */,
+				D0DE969CE2AFDBA1DCF96D01 /* Pods_SwangoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A31C0B8F01F21B62132E36F /* Pods */ = {
+		466676D5B108891BE7AF6C83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				491C306798EC327117B7B615 /* Pods-Swango.debug.xcconfig */,
-				D461198F25B8A5450EC1FFC9 /* Pods-Swango.release.xcconfig */,
-				7A7B1C5E735997CB1730D323 /* Pods-SwangoTests.debug.xcconfig */,
-				6090AB586EFD322BA0E2164D /* Pods-SwangoTests.release.xcconfig */,
+				BECEFB8E04E6BC626D7CD481 /* Pods_Swango.framework */,
+				AC9282B3EFAC921ACBFC0468 /* Pods_SwangoTests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5E03A8F51C25BF0E003149CC /* Classes */ = {
@@ -145,8 +140,8 @@
 				5EEC76CC1C25A1D200FADBF0 /* Products */,
 				5EEC76CD1C25A1D200FADBF0 /* Swango */,
 				5EEC76D91C25A1D200FADBF0 /* SwangoTests */,
-				1A31C0B8F01F21B62132E36F /* Pods */,
-				FE358E7178171D42AF6A27E5 /* Frameworks */,
+				C855498F522C7C6B97D7BB55 /* Pods */,
+				466676D5B108891BE7AF6C83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,14 +185,15 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		FE358E7178171D42AF6A27E5 /* Frameworks */ = {
+		C855498F522C7C6B97D7BB55 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4B93DE33BE8936C635C6C742 /* Pods_Swango.framework */,
-				7BFF6B8604B194F5E854796D /* Pods_SwangoTests.framework */,
-				FC052AA637CE7A4DDAEDBEC9 /* Pods_ios.framework */,
+				C2E4282F75554E66FCE6A3E5 /* Pods-Swango.debug.xcconfig */,
+				4E27FBDC55D58B04B84D62AC /* Pods-Swango.release.xcconfig */,
+				4441CD0AF8171EF93043F0B7 /* Pods-SwangoTests.debug.xcconfig */,
+				F7D666F01D9D8FFB9DE8CC9B /* Pods-SwangoTests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,13 +214,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EEC76DF1C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "Swango" */;
 			buildPhases = (
-				6BD03B0865F4165B77199DF7 /* Check Pods Manifest.lock */,
+				21BD64AF5761DD5847510AAA /* Check Pods Manifest.lock */,
 				5EEC76C61C25A1D200FADBF0 /* Sources */,
 				5EEC76C71C25A1D200FADBF0 /* Frameworks */,
 				5EEC76C81C25A1D200FADBF0 /* Headers */,
 				5EEC76C91C25A1D200FADBF0 /* Resources */,
-				7C8EB5774798647BDCD78D78 /* Embed Pods Frameworks */,
-				3C728FE897EB7D13D60A5FC1 /* Copy Pods Resources */,
+				102828AA059C5CBB14E416CD /* Embed Pods Frameworks */,
+				07EC837A0C1FA162089AB43F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,12 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EEC76E21C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "SwangoTests" */;
 			buildPhases = (
-				F6A4F8EE274888C6E366A823 /* Check Pods Manifest.lock */,
+				B3A0D8CA691DB6B298E3AE54 /* Check Pods Manifest.lock */,
 				5EEC76D11C25A1D200FADBF0 /* Sources */,
 				5EEC76D21C25A1D200FADBF0 /* Frameworks */,
 				5EEC76D31C25A1D200FADBF0 /* Resources */,
-				89FCEDFA90AD490EC3B11479 /* Embed Pods Frameworks */,
-				0B505408EE1E85BBF44BE68D /* Copy Pods Resources */,
+				663050A563CFFBFC97E67019 /* Embed Pods Frameworks */,
+				BE76C55B10C5F5CBB85B8ED5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,22 +306,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B505408EE1E85BBF44BE68D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C728FE897EB7D13D60A5FC1 /* Copy Pods Resources */ = {
+		07EC837A0C1FA162089AB43F /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,22 +321,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swango/Pods-Swango-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6BD03B0865F4165B77199DF7 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7C8EB5774798647BDCD78D78 /* Embed Pods Frameworks */ = {
+		102828AA059C5CBB14E416CD /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,22 +336,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swango/Pods-Swango-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		89FCEDFA90AD490EC3B11479 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios/Pods-ios-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A4F8EE274888C6E366A823 /* Check Pods Manifest.lock */ = {
+		21BD64AF5761DD5847510AAA /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,6 +349,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		663050A563CFFBFC97E67019 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A0D8CA691DB6B298E3AE54 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE76C55B10C5F5CBB85B8ED5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwangoTests/Pods-SwangoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -530,7 +526,7 @@
 		};
 		5EEC76E01C25A1D200FADBF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 491C306798EC327117B7B615 /* Pods-Swango.debug.xcconfig */;
+			baseConfigurationReference = C2E4282F75554E66FCE6A3E5 /* Pods-Swango.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -546,7 +542,7 @@
 		};
 		5EEC76E11C25A1D200FADBF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D461198F25B8A5450EC1FFC9 /* Pods-Swango.release.xcconfig */;
+			baseConfigurationReference = 4E27FBDC55D58B04B84D62AC /* Pods-Swango.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -562,7 +558,7 @@
 		};
 		5EEC76E31C25A1D200FADBF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A7B1C5E735997CB1730D323 /* Pods-SwangoTests.debug.xcconfig */;
+			baseConfigurationReference = 4441CD0AF8171EF93043F0B7 /* Pods-SwangoTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SwangoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -573,7 +569,7 @@
 		};
 		5EEC76E41C25A1D200FADBF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6090AB586EFD322BA0E2164D /* Pods-SwangoTests.release.xcconfig */;
+			baseConfigurationReference = F7D666F01D9D8FFB9DE8CC9B /* Pods-SwangoTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SwangoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
