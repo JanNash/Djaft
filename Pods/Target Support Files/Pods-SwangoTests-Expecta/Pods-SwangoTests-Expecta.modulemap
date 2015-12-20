@@ -1,6 +1,0 @@
-framework module Expecta {
-  umbrella header "Pods-SwangoTests-Expecta-umbrella.h"
-
-  export *
-  module * { export * }
-}
