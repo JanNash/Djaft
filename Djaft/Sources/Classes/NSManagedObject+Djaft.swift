@@ -13,7 +13,7 @@ import CoreData
 // MARK: Public Interface
 public extension NSManagedObject {
     // Computed Class Properties
-    public static var objects: SWObjectManager {
+    public static var objects: DJObjectManager {
         return self._objectManager
     }
     
@@ -33,7 +33,7 @@ public extension NSManagedObject {
 // MARK: Main Implementation
 private extension NSManagedObject {
     // Object Manager
-    private static var __objectManager: SWObjectManager!
+    private static var __objectManager: DJObjectManager!
     
     // Ordering
     private static var _defaultOrderBys: [String] = []
@@ -45,9 +45,9 @@ private extension NSManagedObject {
 
 // MARK: Private Computed Static Properties
 private extension NSManagedObject {
-    private static var _objectManager: SWObjectManager {
+    private static var _objectManager: DJObjectManager {
         if self.__objectManager == nil {
-            self.__objectManager = SWObjectManager(withClass: self)
+            self.__objectManager = DJObjectManager(withClass: self)
         }
         return self.__objectManager
     }

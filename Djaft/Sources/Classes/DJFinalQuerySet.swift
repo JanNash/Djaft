@@ -11,7 +11,7 @@ import CoreData
 
 
 // MARK: Main Implementation
-public class SWFinalQuerySet: SWMetaQuerySet {
+public class DJFinalQuerySet: DJMetaQuerySet {
     // Initialization
     internal init(withClass klass: NSManagedObject.Type,
          objectContext: NSManagedObjectContext? = nil,

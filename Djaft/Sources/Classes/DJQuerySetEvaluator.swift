@@ -12,7 +12,7 @@ import Synchronized
 
 
 // MARK: Public Interface
-public extension SWQuerySetEvaluator {
+public extension DJQuerySetEvaluator {
     // // // Variable Read-Write Properties
     // Object Context
     public var objectContext: NSManagedObjectContext {
@@ -69,7 +69,7 @@ public extension SWQuerySetEvaluator {
 
 
 // MARK: Internal Interface
-internal extension SWQuerySetEvaluator {
+internal extension DJQuerySetEvaluator {
     // // // Variable Readonly Properties
     // // Class Information
     internal var klass: NSManagedObject.Type {
@@ -96,7 +96,7 @@ internal extension SWQuerySetEvaluator {
 
 
 // MARK: Main Implementation
-public class SWQuerySetEvaluator: AnyObject {
+public class DJQuerySetEvaluator: AnyObject {
     // Initialization
     internal init(withClass klass: NSManagedObject.Type,
          objectContext: NSManagedObjectContext? = nil,
@@ -145,7 +145,7 @@ public class SWQuerySetEvaluator: AnyObject {
 
 // MARK: // Backing For Public Variables And Functions
 // MARK: Private Computed Properties
-private extension SWQuerySetEvaluator {
+private extension DJQuerySetEvaluator {
     // Object Context
     private var _objectContext: NSManagedObjectContext {
         get             {return self.__objectContext}
@@ -169,7 +169,7 @@ private extension SWQuerySetEvaluator {
 
 
 // MARK: Force Evaluate
-private extension SWQuerySetEvaluator {
+private extension DJQuerySetEvaluator {
     private func _evaluate() {
         synchronized(self) {
             self._fetchObjectsIfNecessary()
@@ -180,7 +180,7 @@ private extension SWQuerySetEvaluator {
 
 
 // MARK: Reset
-private extension SWQuerySetEvaluator {
+private extension DJQuerySetEvaluator {
     private func _reset() {
         synchronized(self) {
             self.__objects = nil
@@ -193,7 +193,7 @@ private extension SWQuerySetEvaluator {
 
 // MARK: // Private Implementation Logic
 // MARK: Initialization Validation
-private extension SWQuerySetEvaluator {
+private extension DJQuerySetEvaluator {
     private func _validateFilters() {
         
     }
@@ -209,7 +209,7 @@ private extension SWQuerySetEvaluator {
 }
 
 // MARK: Construct FetchRequest
-private extension SWQuerySetEvaluator {
+private extension DJQuerySetEvaluator {
     private var _fetchRequest: NSFetchRequest {
         synchronized(self) {
             if self.__fetchRequest == nil {
@@ -253,7 +253,7 @@ private extension SWQuerySetEvaluator {
 
 
 // MARK: Get Objects / Get Count
-private extension SWQuerySetEvaluator {
+private extension DJQuerySetEvaluator {
     private func _getCountIfNecessary() {
         synchronized(self) {
             if self.__count == nil {

@@ -11,7 +11,7 @@ import CoreData
 
 
 // MARK: Public Interface
-public extension SWObjectManager {
+public extension DJObjectManager {
     // Default Context
     public static var defaultObjectContext: NSManagedObjectContext {
         get             {return self._defaultObjectContext}
@@ -28,27 +28,27 @@ public extension SWObjectManager {
     }
     
     // Basic Queries
-    public func all() -> SWFinalQuerySet {
+    public func all() -> DJFinalQuerySet {
         return self._all()
     }
     
     // QuerySet Generation
-    public func filter(params: String...) -> SWRefinableQuerySet {
+    public func filter(params: String...) -> DJRefinableQuerySet {
         return self._querySetCreator.__filter__(params)
     }
     
-    public func exclude(params: String...) -> SWRefinableQuerySet {
+    public func exclude(params: String...) -> DJRefinableQuerySet {
         return self._querySetCreator.__exclude__(params)
     }
     
-    public func orderBy(params: String...) -> SWRefinableQuerySet {
+    public func orderBy(params: String...) -> DJRefinableQuerySet {
         return self._querySetCreator.__orderBy__(params)
     }
 }
 
 
 // MARK: Main Implementation
-public class SWObjectManager: SWQuerySetEvaluator {
+public class DJObjectManager: DJQuerySetEvaluator {
     // Initialization Override
     internal override init(withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
@@ -58,23 +58,23 @@ public class SWObjectManager: SWQuerySetEvaluator {
         fetchedObjects: [NSManagedObject]? = nil) {
             super.init(
                 withClass: klass,
-                objectContext: SWObjectManager.defaultObjectContext
+                objectContext: DJObjectManager.defaultObjectContext
             )
     }
     
     // Private Static Variable Properties
     private static var __defaultObjectContext: NSManagedObjectContext!
     
-    private var __querySetCreator: SWQuerySetCreator!
+    private var __querySetCreator: DJQuerySetCreator!
 }
 
 
 // MARK: Private Computed Properties
-private extension SWObjectManager {
+private extension DJObjectManager {
     private static var _defaultObjectContext: NSManagedObjectContext {
         get {
             if self.__defaultObjectContext == nil {
-                fatalError("ProgrammingError: SWObjectManager has not been assigned a defaultObjectContext" +
+                fatalError("ProgrammingError: DJObjectManager has not been assigned a defaultObjectContext" +
                            "and no individual object context was specified on the SWQuerySet that has been executed. " +
                            "Please make sure to assign a defaultObjectContext before executing any QuerySets!")
             }
@@ -85,9 +85,9 @@ private extension SWObjectManager {
         }
     }
     
-    private var _querySetCreator: SWQuerySetCreator {
+    private var _querySetCreator: DJQuerySetCreator {
         if self.__querySetCreator == nil {
-            self.__querySetCreator = SWQuerySetCreator(
+            self.__querySetCreator = DJQuerySetCreator(
                 withClass: self.klass,
                 objectContext: self.objectContext,
                 filters: self.filters,
@@ -101,7 +101,7 @@ private extension SWObjectManager {
 
 
 // MARK: Creation/Deletion
-private extension SWObjectManager {
+private extension DJObjectManager {
     // Creation/Deletion
     private func _create<T: NSManagedObject>() -> T {
         return NSEntityDescription.insertNewObjectForEntityForName(self.className, inManagedObjectContext: self.objectContext) as! T
@@ -114,9 +114,9 @@ private extension SWObjectManager {
 
 
 // MARK: Basic Queries
-private extension SWObjectManager {
-    private func _all() -> SWFinalQuerySet {
-        return SWFinalQuerySet(
+private extension DJObjectManager {
+    private func _all() -> DJFinalQuerySet {
+        return DJFinalQuerySet(
             withClass: self.klass,
             objectContext: self.objectContext
         )

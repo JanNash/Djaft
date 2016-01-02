@@ -11,7 +11,7 @@ import CoreData
 
 
 // MARK: Public Interface
-public extension SWMetaQuerySet {
+public extension DJMetaQuerySet {
     // Get Object At Index
     // (Evaluates)
     public subscript(position: Int) -> NSManagedObject? {
@@ -35,7 +35,7 @@ public extension SWMetaQuerySet {
 //
 //
 //// MARK: for-in Iteration Support
-//extension SWMetaQuerySet: SequenceType {
+//extension DJMetaQuerySet: SequenceType {
 //    // Evaluates
 //    public func generate() -> SWQuerySetGenerator {
 //        return SWQuerySetGenerator(querySet: self)
@@ -44,12 +44,12 @@ public extension SWMetaQuerySet {
 
 
 // MARK: Main Implementation
-public class SWMetaQuerySet: SWQuerySetEvaluator {}
+public class DJMetaQuerySet: DJQuerySetEvaluator {}
 
 
 // MARK: // Subscript Implementation Logic
 // MARK: Get Object At Index
-private extension SWMetaQuerySet {
+private extension DJMetaQuerySet {
     private func _getObjectAtIndex(index: Int) -> NSManagedObject? {
         return self.__objects__()[index]
     }

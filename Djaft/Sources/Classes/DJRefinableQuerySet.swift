@@ -12,10 +12,10 @@ import CoreData
 
 
 // Public Interface
-public extension SWRefinableQuerySet {
+public extension DJRefinableQuerySet {
     // Get Sliced QuerySet
-    // (Does not evaluate, returns SWFinalQuerySet that does not allow more refinements)
-    public subscript(startIndex: Int, endIndex: Int) -> SWFinalQuerySet {
+    // (Does not evaluate, returns DJFinalQuerySet that does not allow more refinements)
+    public subscript(startIndex: Int, endIndex: Int) -> DJFinalQuerySet {
         return self._getSlicedQuerySet(startIndex, endIndex: endIndex)
     }
     
@@ -26,31 +26,31 @@ public extension SWRefinableQuerySet {
     }
     
     // QuerySet Generation
-    public func filter(params: String...) -> SWRefinableQuerySet {
+    public func filter(params: String...) -> DJRefinableQuerySet {
         return self._querySetCreator.__filter__(params)
     }
     
-    public func exclude(params: String...) -> SWRefinableQuerySet {
+    public func exclude(params: String...) -> DJRefinableQuerySet {
         return self._querySetCreator.__exclude__(params)
     }
     
-    public func orderBy(params: String...) -> SWRefinableQuerySet {
+    public func orderBy(params: String...) -> DJRefinableQuerySet {
         return self._querySetCreator.__orderBy__(params)
     }
 }
 
 
 // MARK: Main Implementation
-public class SWRefinableQuerySet: SWMetaQuerySet {
-    private var __querySetCreator: SWQuerySetCreator!
+public class DJRefinableQuerySet: DJMetaQuerySet {
+    private var __querySetCreator: DJQuerySetCreator!
 }
 
 
 // MARK: Private Computed Properties
-private extension SWRefinableQuerySet {
-    private var _querySetCreator: SWQuerySetCreator {
+private extension DJRefinableQuerySet {
+    private var _querySetCreator: DJQuerySetCreator {
         if self.__querySetCreator == nil {
-            self.__querySetCreator = SWQuerySetCreator(
+            self.__querySetCreator = DJQuerySetCreator(
                 withClass: self.klass,
                 objectContext: self.objectContext,
                 filters: self.filters,
@@ -64,8 +64,8 @@ private extension SWRefinableQuerySet {
 
 
 // MARK: Get Sliced QuerySet
-private extension SWRefinableQuerySet {
-    private func _getSlicedQuerySet(startIndex: Int, endIndex: Int) -> SWFinalQuerySet {
+private extension DJRefinableQuerySet {
+    private func _getSlicedQuerySet(startIndex: Int, endIndex: Int) -> DJFinalQuerySet {
         var objects: [NSManagedObject]?
         if self.isFetched {
             objects = self.__objects__()
@@ -79,7 +79,7 @@ private extension SWRefinableQuerySet {
             limit = 0
         }
         
-        return SWFinalQuerySet(
+        return DJFinalQuerySet(
             withClass: self.klass,
             objectContext: self.objectContext,
             offset: startIndex,
@@ -94,7 +94,7 @@ private extension SWRefinableQuerySet {
 
 
 // MARK: Get Objects From Start To End With Step
-private extension SWMetaQuerySet {
+private extension DJMetaQuerySet {
     private func _objectsFromStart(startIndex: Int, toEnd endIndex: Int, withStepSize stepSize: Int) -> [NSManagedObject] {
         self.evaluate()
         var result: [NSManagedObject] = []
