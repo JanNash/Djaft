@@ -20,27 +20,27 @@ public extension SWMetaQuerySet {
 }
 
 
-public struct SWQuerySetGenerator<T: NSManagedObject>: GeneratorType {
-    private let _objects: [T]
-    private var _indexInSequence: Int = 0
-    
-    internal init<T: NSManagedObject>(objects: [T]) {
-        self._querySet = querySet
-    }
-    
-    public mutating func next() -> NSManagedObject? {
-        
-    }
-}
-
-
-// MARK: for-in Iteration Support
-extension SWMetaQuerySet: SequenceType {
-    // Evaluates
-    public func generate() -> SWQuerySetGenerator {
-        return SWQuerySetGenerator(querySet: self)
-    }
-}
+//public struct SWQuerySetGenerator<T: NSManagedObject>: GeneratorType {
+//    private let _objects: [T]
+//    private var _indexInSequence: Int = 0
+//    
+//    internal init<T: NSManagedObject>(objects: [T]) {
+//        self._querySet = querySet
+//    }
+//    
+//    public mutating func next() -> NSManagedObject? {
+//        
+//    }
+//}
+//
+//
+//// MARK: for-in Iteration Support
+//extension SWMetaQuerySet: SequenceType {
+//    // Evaluates
+//    public func generate() -> SWQuerySetGenerator {
+//        return SWQuerySetGenerator(querySet: self)
+//    }
+//}
 
 
 // MARK: Main Implementation
