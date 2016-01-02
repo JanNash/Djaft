@@ -27,30 +27,30 @@ public extension SWRefinableQuerySet {
     
     // QuerySet Generation
     public func filter(params: String...) -> SWRefinableQuerySet {
-        return self._querySetGenerator.__filter__(params)
+        return self._querySetCreator.__filter__(params)
     }
     
     public func exclude(params: String...) -> SWRefinableQuerySet {
-        return self._querySetGenerator.__exclude__(params)
+        return self._querySetCreator.__exclude__(params)
     }
     
     public func orderBy(params: String...) -> SWRefinableQuerySet {
-        return self._querySetGenerator.__orderBy__(params)
+        return self._querySetCreator.__orderBy__(params)
     }
 }
 
 
 // MARK: Main Implementation
 public class SWRefinableQuerySet: SWMetaQuerySet {
-    private var __querySetGenerator: SWQuerySetGenerator!
+    private var __querySetCreator: SWQuerySetCreator!
 }
 
 
 // MARK: Private Computed Properties
 private extension SWRefinableQuerySet {
-    private var _querySetGenerator: SWQuerySetGenerator {
-        if self.__querySetGenerator == nil {
-            self.__querySetGenerator = SWQuerySetGenerator(
+    private var _querySetCreator: SWQuerySetCreator {
+        if self.__querySetCreator == nil {
+            self.__querySetCreator = SWQuerySetCreator(
                 withClass: self.klass,
                 objectContext: self.objectContext,
                 filters: self.filters,
@@ -58,7 +58,7 @@ private extension SWRefinableQuerySet {
                 orderBys: self.orderBys
             )
         }
-        return self.__querySetGenerator
+        return self.__querySetCreator
     }
 }
 

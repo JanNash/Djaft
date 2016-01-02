@@ -1,5 +1,5 @@
 //
-//  SWQuerySetGenerator.swift
+//  SWQuerySetCreator.swift
 //  Swango
 //
 //  Created by Jan Nash on 16/11/15.
@@ -11,7 +11,7 @@ import CoreData
 
 
 // MARK: Internal Interface
-internal class SWQuerySetGenerator: SWQuerySetEvaluator {
+internal class SWQuerySetCreator: SWQuerySetEvaluator {
     // Basic QuerySet Generation
     internal func __createRefinableQuerySet__(
         withNewFilters newFilters: [String] = [],
@@ -40,7 +40,7 @@ internal class SWQuerySetGenerator: SWQuerySetEvaluator {
 
 
 // MARK: Basic QuerySet Generation
-private extension SWQuerySetGenerator {
+private extension SWQuerySetCreator {
     private func _createRefinableQuerySet(
         withNewFilters newFilters: [String] = [],
         withNewExcludes newExcludes: [String] = [],
@@ -57,7 +57,7 @@ private extension SWQuerySetGenerator {
 
 
 // Refined QuerySet Generation
-private extension SWQuerySetGenerator {
+private extension SWQuerySetCreator {
     private func _filter(params: [String]) -> SWRefinableQuerySet {
         return self._createRefinableQuerySet(withNewFilters: params)
     }
