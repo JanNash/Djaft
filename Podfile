@@ -7,10 +7,10 @@ use_frameworks!
 inhibit_all_warnings!
 
 
-target 'Swango' do
+target 'Djaft' do
 	podspec
 end
 
-target 'SwangoTests' do
+target 'DjaftTests' do
 	podspec
 end

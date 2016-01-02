@@ -1,2 +1,2 @@
-# Swango
+# Djaft
 Django + Swift + CoreData = ❤️
