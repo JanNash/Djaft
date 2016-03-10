@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
-    <entity name="Animal" syncable="YES">
+    <entity name="Animal" representedClassName=".Animal" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="enclosure" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Enclosure" inverseName="animals" inverseEntity="Enclosure" syncable="YES"/>
         <relationship name="zoo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Zoo" inverseName="animals" inverseEntity="Zoo" syncable="YES"/>
     </entity>
-    <entity name="Enclosure" syncable="YES">
+    <entity name="Enclosure" representedClassName=".Enclosure" syncable="YES">
         <relationship name="animals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Animal" inverseName="enclosure" inverseEntity="Animal" syncable="YES"/>
         <relationship name="zoo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Zoo" inverseName="enclosures" inverseEntity="Zoo" syncable="YES"/>
     </entity>
-    <entity name="Visitor" syncable="YES">
+    <entity name="Visitor" representedClassName=".Visitor" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="zoo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Zoo" inverseName="visitors" inverseEntity="Zoo" syncable="YES"/>
     </entity>
-    <entity name="Zoo" syncable="YES">
+    <entity name="Zoo" representedClassName=".Zoo" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="animals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Animal" inverseName="zoo" inverseEntity="Animal" syncable="YES"/>
         <relationship name="enclosures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Enclosure" inverseName="zoo" inverseEntity="Enclosure" syncable="YES"/>
