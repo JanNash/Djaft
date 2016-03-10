@@ -10,10 +10,11 @@ import Foundation
 import CoreData
 
 
-// MARK: Internal Interface
-internal class DJQuerySetCreator: DJQuerySetEvaluator {
+// MARK: // Internal
+// MARK: Interface
+class DJQuerySetCreator: DJQuerySetEvaluator {
     // Basic QuerySet Generation
-    internal func __createRefinableQuerySet__(
+    func __createRefinableQuerySet__(
         withNewFilters newFilters: [String] = [],
         withNewExcludes newExcludes: [String] = [],
         withNewOrderBys newOrderBys: [String] = []) -> DJRefinableQuerySet {
@@ -25,20 +26,21 @@ internal class DJQuerySetCreator: DJQuerySetEvaluator {
     }
     
     // Refined QuerySet Generation
-    internal func __filter__(params: [String]) -> DJRefinableQuerySet {
+    func __filter__(params: [String]) -> DJRefinableQuerySet {
         return self._filter(params)
     }
     
-    internal func __exclude__(params: [String]) -> DJRefinableQuerySet {
+    func __exclude__(params: [String]) -> DJRefinableQuerySet {
         return self._exclude(params)
     }
     
-    internal func __orderBy__(params: [String]) -> DJRefinableQuerySet {
+    func __orderBy__(params: [String]) -> DJRefinableQuerySet {
         return self._orderBy(params)
     }
 }
 
 
+// MARK: // Private
 // MARK: Basic QuerySet Generation
 private extension DJQuerySetCreator {
     private func _createRefinableQuerySet(
@@ -56,7 +58,7 @@ private extension DJQuerySetCreator {
 }
 
 
-// Refined QuerySet Generation
+// MARK: Refined QuerySet Generation
 private extension DJQuerySetCreator {
     private func _filter(params: [String]) -> DJRefinableQuerySet {
         return self._createRefinableQuerySet(withNewFilters: params)
@@ -70,4 +72,3 @@ private extension DJQuerySetCreator {
         return self._createRefinableQuerySet(withNewOrderBys: params)
     }
 }
-

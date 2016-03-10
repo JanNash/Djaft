@@ -15,13 +15,10 @@ Pod::Spec.new do |s|
   }
   s.social_media_url      = "http://twitter.com/JanPNash"
   s.platform    		      = :ios, "8.0"
-  s.source                = {
-    :path => 
+  s.source       		      = {
+    :git => "https://github.com/JanNash/Djaft.git",
+    :tag => "v#{s.version}"
   }
-  # s.source       		      = { 
-  #   :git => "https://github.com/JanNash/Djaft.git", 
-  #   :tag => "v#{s.version}" 
-  # }
   s.source_files  		    = "Djaft/Sources/*/*.swift"
   s.public_header_files   = []
   s.dependency 			      'Synchronized'

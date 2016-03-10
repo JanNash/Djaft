@@ -20,7 +20,7 @@ public extension DJMetaQuerySet {
     }
 }
 
-// SequenceType Extension
+// MARK: SequenceType Extension
 extension DJMetaQuerySet: SequenceType {
     // Evaluates
     public func generate() -> GeneratorOf<T> {
@@ -29,14 +29,13 @@ extension DJMetaQuerySet: SequenceType {
 }
 
 
-// MARK: // Internal
 // MARK: Class Declaration
 public class DJMetaQuerySet: DJQuerySetEvaluator {}
 
 
 // MARK: // Private
-// MARK: // Subscript Implementation Logic
-// MARK: Get Object At Index
+// MARK: Subscript Implementation Logic
+// Get Object At Index
 private extension DJMetaQuerySet where T: NSManagedObject {
     private func _getObjectAtIndex(index: Int) -> T? {
         return self.__objects__()[index]
@@ -63,6 +62,3 @@ public struct DJQuerySetGenerator<T: NSManagedObject>: GeneratorType {
         }
     }
 }
-
-
-

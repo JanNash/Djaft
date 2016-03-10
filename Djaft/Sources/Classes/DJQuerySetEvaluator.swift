@@ -11,7 +11,8 @@ import CoreData
 import Synchronized
 
 
-// MARK: Public Interface
+// MARK: // Public 
+// MARK: Interface
 public extension DJQuerySetEvaluator {
     // // // Variable Read-Write Properties
     // Object Context
@@ -68,58 +69,8 @@ public extension DJQuerySetEvaluator {
 }
 
 
-// MARK: Internal Interface
-internal extension DJQuerySetEvaluator {
-    // // // Variable Readonly Properties
-    // // Class Information
-    internal var klass: NSManagedObject.Type {
-        get {return self._klass}
-    }
-    
-    internal var className: String {
-        get {return self._className}
-    }
-    
-    // // Functions
-    // Objects (Evaluates)
-    internal func __objects__() -> [T] {
-        self._fetchObjectsIfNecessary()
-        return self.__objects! as! [T]
-    }
-    
-    // Count (Only Gets Count)
-    internal func __count__() -> Int {
-        self._getCountIfNecessary()
-        return self.__count!
-    }
-}
-
-
-// MARK: Main Implementation
+// MARK: Class Declaration
 public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
-    // Initialization
-    internal init(withClass klass: NSManagedObject.Type,
-         objectContext: NSManagedObjectContext? = nil,
-         filters: [String] = [],
-         excludes: [String] = [],
-         orderBys: [String]? = nil,
-         fetchedObjects: [T]? = nil) {
-            
-        self._klass = klass
-        self.__objectContext = objectContext
-        
-        self._filters = filters
-        self._excludes = excludes
-        self._orderBys = orderBys
-        
-        self._validateFilters()
-        self._validateExcludes()
-        self._validateOrderBys()
-        
-        self.__objects = fetchedObjects
-        self.__count = fetchedObjects?.count
-    }
-    
     // Private Constant Properties
     private let _klass: NSManagedObject.Type!
     
@@ -142,9 +93,63 @@ public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
 }
 
 
+// MARK: // Internal
+// MARK: Interface
+extension DJQuerySetEvaluator {
+    // // // Variable Readonly Properties
+    // // Class Information
+    var klass: NSManagedObject.Type {
+        get {return self._klass}
+    }
+    
+    var className: String {
+        get {return self._className}
+    }
+    
+    // // Functions
+    // Objects (Evaluates)
+    func __objects__() -> [T] {
+        self._fetchObjectsIfNecessary()
+        return self.__objects! as! [T]
+    }
+    
+    // Count (Only Gets Count)
+    func __count__() -> Int {
+        self._getCountIfNecessary()
+        return self.__count!
+    }
+}
 
-// MARK: // Backing For Public Variables And Functions
-// MARK: Private Computed Properties
+
+// MARK: Initialization
+extension DJQuerySetEvaluator {
+    // Initialization
+    init(withClass klass: NSManagedObject.Type,
+        objectContext: NSManagedObjectContext? = nil,
+        filters: [String] = [],
+        excludes: [String] = [],
+        orderBys: [String]? = nil,
+        fetchedObjects: [T]? = nil) {
+            
+            self._klass = klass
+            self.__objectContext = objectContext
+            
+            self._filters = filters
+            self._excludes = excludes
+            self._orderBys = orderBys
+            
+            self._validateFilters()
+            self._validateExcludes()
+            self._validateOrderBys()
+            
+            self.__objects = fetchedObjects
+            self.__count = fetchedObjects?.count
+    }
+}
+
+
+// MARK: // Private 
+// MARK: Computed Properties
 private extension DJQuerySetEvaluator {
     // Object Context
     private var _objectContext: NSManagedObjectContext {
@@ -190,20 +195,18 @@ private extension DJQuerySetEvaluator {
 }
 
 
-
-// MARK: // Private Implementation Logic
 // MARK: Initialization Validation
 private extension DJQuerySetEvaluator {
     private func _validateFilters() {
-        
+        // TODO
     }
     
     private func _validateExcludes() {
-        
+        // TODO
     }
     
     private func _validateOrderBys() {
-        
+        // TODO
     }
     
 }
@@ -282,5 +285,3 @@ private extension DJQuerySetEvaluator {
         }
     }
 }
-
-

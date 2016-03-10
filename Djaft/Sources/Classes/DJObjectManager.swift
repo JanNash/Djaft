@@ -10,7 +10,8 @@ import Foundation
 import CoreData
 
 
-// MARK: Public Interface
+// MARK: // Public
+// MARK: Interface
 public extension DJObjectManager {
     // Default Context
     public static var defaultObjectContext: NSManagedObjectContext {
@@ -47,10 +48,18 @@ public extension DJObjectManager {
 }
 
 
-// MARK: Main Implementation
+// MARK: Class Declaration
 public class DJObjectManager: DJQuerySetEvaluator {
-    // Initialization Override
-    internal override init(withClass klass: NSManagedObject.Type,
+    private static var __defaultObjectContext: NSManagedObjectContext!
+    
+    private var __querySetCreator: DJQuerySetCreator!
+}
+
+
+// MARK: // Internal
+// MARK: Initialization
+extension DJObjectManager {
+    override init(withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         filters: [String] = [],
         excludes: [String] = [],
@@ -61,22 +70,19 @@ public class DJObjectManager: DJQuerySetEvaluator {
                 objectContext: DJObjectManager.defaultObjectContext
             )
     }
-    
-    // Private Static Variable Properties
-    private static var __defaultObjectContext: NSManagedObjectContext!
-    
-    private var __querySetCreator: DJQuerySetCreator!
 }
 
 
-// MARK: Private Computed Properties
+// MARK: // Private
+// MARK: Computed Properties
 private extension DJObjectManager {
     private static var _defaultObjectContext: NSManagedObjectContext {
         get {
             if self.__defaultObjectContext == nil {
                 fatalError("ProgrammingError: DJObjectManager has not been assigned a defaultObjectContext" +
-                           "and no individual object context was specified on the SWQuerySet that has been executed. " +
-                           "Please make sure to assign a defaultObjectContext before executing any QuerySets!")
+                           "and no individual object context was specified on the DJQuerySet that has been executed. " +
+                           "Please make sure to assign a defaultObjectContext or at least an individual context" +
+                           "before executing any QuerySets!")
             }
             return self.__defaultObjectContext
         }
@@ -122,5 +128,3 @@ private extension DJObjectManager {
         )
     }
 }
-
-

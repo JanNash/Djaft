@@ -1,5 +1,5 @@
 //
-//  NSManagedObject+Djaft.swift
+//  NSManagedObject (Djaft).swift
 //  Djaft
 //
 //  Created by Jan Nash on 25/10/15.
@@ -10,7 +10,8 @@ import Foundation
 import CoreData
 
 
-// MARK: Public Interface
+// MARK: // Public
+// MARK: Interface
 public extension NSManagedObject {
     // Computed Class Properties
     public static var objects: DJObjectManager {
@@ -30,7 +31,8 @@ public extension NSManagedObject {
 }
 
 
-// MARK: Main Implementation
+// MARK: // Internal
+// MARK: Static Properties Declaration
 private extension NSManagedObject {
     // Object Manager
     private static var __objectManager: DJObjectManager!
@@ -43,7 +45,8 @@ private extension NSManagedObject {
 }
 
 
-// MARK: Private Computed Static Properties
+// MARK: // Private
+// MARK: Static Computed Properties Implementation
 private extension NSManagedObject {
     private static var _objectManager: DJObjectManager {
         if self.__objectManager == nil {
@@ -81,12 +84,13 @@ private extension NSManagedObject {
 }
 
     
-// MARK: Private Instance Functions
+// MARK: Instance Functions
 private extension NSManagedObject {
     private func _save() {
         do {
             try self.managedObjectContext?.save()
         } catch let error as NSError {
+            // TODO!!!
             printError(error)
         }
     }

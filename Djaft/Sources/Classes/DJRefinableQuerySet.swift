@@ -11,7 +11,8 @@ import CoreData
 //import Synchronized
 
 
-// Public Interface
+// MARK: // Public 
+// MARK: Interface
 public extension DJRefinableQuerySet {
     // Get Sliced QuerySet
     // (Does not evaluate, returns DJFinalQuerySet that does not allow more refinements)
@@ -40,13 +41,14 @@ public extension DJRefinableQuerySet {
 }
 
 
-// MARK: Main Implementation
+// MARK: Class Declaration
 public class DJRefinableQuerySet: DJMetaQuerySet {
     private var __querySetCreator: DJQuerySetCreator!
 }
 
 
-// MARK: Private Computed Properties
+// MARK: // Private 
+// MARK: Computed Properties
 private extension DJRefinableQuerySet {
     private var _querySetCreator: DJQuerySetCreator {
         if self.__querySetCreator == nil {
@@ -106,5 +108,3 @@ private extension DJMetaQuerySet {
         return result
     }
 }
-
-
