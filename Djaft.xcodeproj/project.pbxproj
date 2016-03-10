@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08CAAFFC182C0A45FB19163A5A984617 /* Pods_Djaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265095597B104472B4181D04B01EBA92 /* Pods_Djaft.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		08CAAFFC182C0A45FB19163A5A984617 /* Pods_Djaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265095597B104472B4181D04B01EBA92 /* Pods_Djaft.framework */; };
 		28763C36146CE624A726FEC9633D4C7A /* Visitor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7FEEA358FE66ECC3A110DB66E76BE3 /* Visitor+CoreDataProperties.swift */; };
 		30112C786DACA7ABCF6633F17C0E9CD3 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5896C0DE55950918F250C7CE140618 /* Animal.swift */; };
 		33EABF5C22D931663092CB318819B927 /* DjaftBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687EE33091749D1C1F9748D104E7A61B /* DjaftBaseTest.swift */; };
@@ -20,7 +20,7 @@
 		8DA14ABE9F971450365A53AD3CE43464 /* Zoo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39B206B7B6A8D9656B1FA4FB027E17 /* Zoo+CoreDataProperties.swift */; };
 		922F8321AF65C7C15AF3162ED22CB548 /* DjaftUnitTestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E5FADE1D2AB089A5327EC731DE64 /* DjaftUnitTestDataModel.xcdatamodeld */; };
 		B3746B72098B557A899759F6E0AB81BA /* Djaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DAAEE9D579CD92E0C69380B4F100EC /* Djaft.framework */; };
-		C5FFDBC0B9941525BF65F65EF21B7382 /* Pods_DjaftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DA5DDBBCE9802C57E0ED0CE699732 /* Pods_DjaftTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C5FFDBC0B9941525BF65F65EF21B7382 /* Pods_DjaftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DA5DDBBCE9802C57E0ED0CE699732 /* Pods_DjaftTests.framework */; };
 		F380D00F970487030E3B1F553EC9D048 /* Zoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C265B7FA21DA06F38AB7300AB0AA6 /* Zoo.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +88,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		259285251B191BB59FFD5B3D62CA5AF0 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DCC98BAD22B781D4F45DC45DF1FDB754 /* Animal+CoreDataProperties.swift */,
+				6A5896C0DE55950918F250C7CE140618 /* Animal.swift */,
+				F318272A1A6E56A1C2ABC3C04B67F94B /* Enclosure+CoreDataProperties.swift */,
+				60450060B33B0E14598CD110D6AA2961 /* Enclosure.swift */,
+				4B7FEEA358FE66ECC3A110DB66E76BE3 /* Visitor+CoreDataProperties.swift */,
+				AB11AB836DA93FBB87E94E4D1D43CED9 /* Visitor.swift */,
+				AA39B206B7B6A8D9656B1FA4FB027E17 /* Zoo+CoreDataProperties.swift */,
+				2E7C265B7FA21DA06F38AB7300AB0AA6 /* Zoo.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		3843AE452D0BF24BC142D72F48949B9B /* DjaftTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +133,15 @@
 			path = Djaft;
 			sourceTree = "<group>";
 		};
+		6844B4C8A7B25820CE7C99985F03F4B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7DAAEE9D579CD92E0C69380B4F100EC /* Djaft.framework */,
+				98995E1444AADE92B3B08C3D4898A636 /* DjaftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		706AC0F6EA79A8F4FD470CDDD53343B1 /* MockSetup */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,30 +150,6 @@
 				2E05E5FADE1D2AB089A5327EC731DE64 /* DjaftUnitTestDataModel.xcdatamodeld */,
 			);
 			path = MockSetup;
-			sourceTree = "<group>";
-		};
-		259285251B191BB59FFD5B3D62CA5AF0 /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				DCC98BAD22B781D4F45DC45DF1FDB754 /* Animal+CoreDataProperties.swift */,
-				6A5896C0DE55950918F250C7CE140618 /* Animal.swift */,
-				F318272A1A6E56A1C2ABC3C04B67F94B /* Enclosure+CoreDataProperties.swift */,
-				60450060B33B0E14598CD110D6AA2961 /* Enclosure.swift */,
-				4B7FEEA358FE66ECC3A110DB66E76BE3 /* Visitor+CoreDataProperties.swift */,
-				AB11AB836DA93FBB87E94E4D1D43CED9 /* Visitor.swift */,
-				AA39B206B7B6A8D9656B1FA4FB027E17 /* Zoo+CoreDataProperties.swift */,
-				2E7C265B7FA21DA06F38AB7300AB0AA6 /* Zoo.swift */,
-			);
-			path = Objects;
-			sourceTree = "<group>";
-		};
-		6844B4C8A7B25820CE7C99985F03F4B9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A7DAAEE9D579CD92E0C69380B4F100EC /* Djaft.framework */,
-				98995E1444AADE92B3B08C3D4898A636 /* DjaftTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8B76847B4AFE388122ED53753167175F /* Pods */ = {
@@ -272,7 +272,6 @@
 				6077908B70A74A6A932A35BE2EF32E9D /* Frameworks */,
 				14C5E7F497A09F714097F4BB8C41E9A0 /* Headers */,
 				DBD5709ED60B917E3A41530746598C33 /* Resources */,
-				F8F810C35BB1F4203D546CBC78EBD19D /* Embed Pods Frameworks */,
 				157CB1FD6B77E084A4612C696C0A4A38 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -411,21 +410,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F8F810C35BB1F4203D546CBC78EBD19D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Djaft/Pods-Djaft-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
