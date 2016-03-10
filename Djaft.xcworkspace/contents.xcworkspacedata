@@ -14,6 +14,9 @@
       location = "group:VERSION">
    </FileRef>
    <FileRef
+      location = "group:travis.yml">
+   </FileRef>
+   <FileRef
       location = "group:Djaft.xcodeproj">
    </FileRef>
    <FileRef
