@@ -7,183 +7,183 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2277B658B8C383F20EC01544 /* Pods_DjaftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6698B06595A399233D1C7B90 /* Pods_DjaftTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		5E086C231C3881480090024C /* Djaft.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EEC76CE1C25A1D200FADBF0 /* Djaft.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5EE46B781C25D44100C7CC14 /* CoreDataMockSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE46B771C25D44100C7CC14 /* CoreDataMockSetup.swift */; };
-		5EE46B7C1C25E5B500C7CC14 /* DjaftUnitTestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EE46B7A1C25E5B500C7CC14 /* DjaftUnitTestDataModel.xcdatamodeld */; };
-		5EEC76D61C25A1D200FADBF0 /* Djaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EEC76CB1C25A1D200FADBF0 /* Djaft.framework */; };
-		5EEC76DB1C25A1D200FADBF0 /* DjaftBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC76DA1C25A1D200FADBF0 /* DjaftBaseTest.swift */; };
-		FD2AF769B2D8558844AE2B51 /* Pods_Djaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62C835B64FE312C7E9A5BEC /* Pods_Djaft.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		08CAAFFC182C0A45FB19163A5A984617 /* Pods_Djaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265095597B104472B4181D04B01EBA92 /* Pods_Djaft.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		23E6B158F3CABDE52F9996DF1674D9D5 /* DjaftUnitTestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B2A2B4B9BD557C19C0D49DA644020A1 /* DjaftUnitTestDataModel.xcdatamodeld */; };
+		33EABF5C22D931663092CB318819B927 /* DjaftBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687EE33091749D1C1F9748D104E7A61B /* DjaftBaseTest.swift */; };
+		6AB1D2E8D55FB017B3EEFD020D17AC53 /* Djaft.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A6EFD49AAE7B85606317187CC3DE48 /* Djaft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78CC9C7705FD9DD022A376998A18B9A7 /* CoreDataMockSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59792997E1B5A4B34F3984B1936DFB /* CoreDataMockSetup.swift */; };
+		B3746B72098B557A899759F6E0AB81BA /* Djaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DAAEE9D579CD92E0C69380B4F100EC /* Djaft.framework */; };
+		C5FFDBC0B9941525BF65F65EF21B7382 /* Pods_DjaftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DA5DDBBCE9802C57E0ED0CE699732 /* Pods_DjaftTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5EEC76D71C25A1D200FADBF0 /* PBXContainerItemProxy */ = {
+		8DF45BC63023C5B6D430C26AE72DD082 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5EEC76C21C25A1D200FADBF0 /* Project object */;
+			containerPortal = 5CFDE3C0850D8826283FB4E300D9A404 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5EEC76CA1C25A1D200FADBF0;
+			remoteGlobalIDString = 66650D0ED4343E8950C4D97CD72A170E;
 			remoteInfo = Djaft;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2ADE9852C6C2273BA53D68C1 /* Pods-DjaftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DjaftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DjaftTests/Pods-DjaftTests.release.xcconfig"; sourceTree = "<group>"; };
-		56A33DFF0DEBBDD69893F6AD /* Pods-Djaft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Djaft.release.xcconfig"; path = "Pods/Target Support Files/Pods-Djaft/Pods-Djaft.release.xcconfig"; sourceTree = "<group>"; };
-		5EE46B771C25D44100C7CC14 /* CoreDataMockSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataMockSetup.swift; sourceTree = "<group>"; };
-		5EE46B7B1C25E5B500C7CC14 /* DjaftUnitTestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DjaftUnitTestDataModel.xcdatamodel; sourceTree = "<group>"; };
-		5EEC76CB1C25A1D200FADBF0 /* Djaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Djaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EEC76CE1C25A1D200FADBF0 /* Djaft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Djaft.h; sourceTree = "<group>"; };
-		5EEC76D01C25A1D200FADBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EEC76D51C25A1D200FADBF0 /* DjaftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DjaftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EEC76DA1C25A1D200FADBF0 /* DjaftBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DjaftBaseTest.swift; sourceTree = "<group>"; };
-		5EEC76DC1C25A1D200FADBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EEC76E61C25A25E00FADBF0 /* NSManagedObject+Djaft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSManagedObject+Djaft.swift"; path = "Classes/NSManagedObject+Djaft.swift"; sourceTree = "<group>"; };
-		5EEC76E71C25A25E00FADBF0 /* DJQuerySetCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJQuerySetCreator.swift; sourceTree = "<group>"; };
-		5EEC76E81C25A25E00FADBF0 /* DJObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJObjectManager.swift; sourceTree = "<group>"; };
-		5EEC76E91C25A25E00FADBF0 /* DJRefinableQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJRefinableQuerySet.swift; sourceTree = "<group>"; };
-		5EEC76EA1C25A25E00FADBF0 /* DJFinalQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJFinalQuerySet.swift; sourceTree = "<group>"; };
-		5EEC76EB1C25A25E00FADBF0 /* DJQuerySetEvaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJQuerySetEvaluator.swift; sourceTree = "<group>"; };
-		5EEC76EC1C25A25E00FADBF0 /* DJMetaQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJMetaQuerySet.swift; sourceTree = "<group>"; };
-		5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = errorPrinting.swift; sourceTree = "<group>"; };
-		6698B06595A399233D1C7B90 /* Pods_DjaftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DjaftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7686DCCECBDB3F767708D148 /* Pods-Djaft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Djaft.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Djaft/Pods-Djaft.debug.xcconfig"; sourceTree = "<group>"; };
-		9E7490336DB81B770A7E534A /* Pods-DjaftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DjaftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DjaftTests/Pods-DjaftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F62C835B64FE312C7E9A5BEC /* Pods_Djaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Djaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2304F688C57BA06646F22D34317F1137 /* DJQuerySetCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJQuerySetCreator.swift; sourceTree = "<group>"; };
+		265095597B104472B4181D04B01EBA92 /* Pods_Djaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Djaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C58F495FDB2DDDB5C11907D05748CB5 /* DJRefinableQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJRefinableQuerySet.swift; sourceTree = "<group>"; };
+		5CBCCD8123AD27A870F5ABA31137BC5D /* Pods-DjaftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DjaftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DjaftTests/Pods-DjaftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		61A6EFD49AAE7B85606317187CC3DE48 /* Djaft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Djaft.h; sourceTree = "<group>"; };
+		687EE33091749D1C1F9748D104E7A61B /* DjaftBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DjaftBaseTest.swift; sourceTree = "<group>"; };
+		8DE761ECDC71A08B8FED19E99B5C2465 /* DjaftUnitTestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DjaftUnitTestDataModel.xcdatamodel; sourceTree = "<group>"; };
+		9880FC50AF7D52AD5E8387280E07570F /* DJQuerySetEvaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJQuerySetEvaluator.swift; sourceTree = "<group>"; };
+		98995E1444AADE92B3B08C3D4898A636 /* DjaftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DjaftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B59792997E1B5A4B34F3984B1936DFB /* CoreDataMockSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataMockSetup.swift; sourceTree = "<group>"; };
+		A05396D7D1E9B513D58BF53E50C7298D /* Pods-Djaft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Djaft.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Djaft/Pods-Djaft.debug.xcconfig"; sourceTree = "<group>"; };
+		A7DAAEE9D579CD92E0C69380B4F100EC /* Djaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Djaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B53BEFC56DFE19AA86739E981B1ED690 /* DJMetaQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJMetaQuerySet.swift; sourceTree = "<group>"; };
+		BF4B27BCDC5DD12C9C1891E2AFD7A087 /* Pods-DjaftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DjaftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DjaftTests/Pods-DjaftTests.release.xcconfig"; sourceTree = "<group>"; };
+		C88FCD80F4AF2548D28D61D093CA543E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA8DA5DDBBCE9802C57E0ED0CE699732 /* Pods_DjaftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DjaftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE0468EB59FA5225C9E647FBF6A82FC /* DJFinalQuerySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJFinalQuerySet.swift; sourceTree = "<group>"; };
+		DAE0046F55A866918EBECAA4C0A0C1AA /* Pods-Djaft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Djaft.release.xcconfig"; path = "Pods/Target Support Files/Pods-Djaft/Pods-Djaft.release.xcconfig"; sourceTree = "<group>"; };
+		E20826E1BD75DC5548FF2420AF5AE23B /* NSManagedObject+Djaft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSManagedObject+Djaft.swift"; path = "Classes/NSManagedObject+Djaft.swift"; sourceTree = "<group>"; };
+		E9F83C6B93EF2B31020D3CDB012F7D80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FB10C17504A7FDF8D99CDFF70EC5F1 /* DJObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJObjectManager.swift; sourceTree = "<group>"; };
+		F3051E06409233804F051D339C6A4E7C /* errorPrinting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = errorPrinting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5EEC76C71C25A1D200FADBF0 /* Frameworks */ = {
+		6077908B70A74A6A932A35BE2EF32E9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2AF769B2D8558844AE2B51 /* Pods_Djaft.framework in Frameworks */,
+				08CAAFFC182C0A45FB19163A5A984617 /* Pods_Djaft.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EEC76D21C25A1D200FADBF0 /* Frameworks */ = {
+		7785612677A78E870773A554AFD6CE52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EEC76D61C25A1D200FADBF0 /* Djaft.framework in Frameworks */,
-				2277B658B8C383F20EC01544 /* Pods_DjaftTests.framework in Frameworks */,
+				B3746B72098B557A899759F6E0AB81BA /* Djaft.framework in Frameworks */,
+				C5FFDBC0B9941525BF65F65EF21B7382 /* Pods_DjaftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25440E007A4F1CC5CBE980D8 /* Frameworks */ = {
+		C9B0B6CBC14C5F0627504DECCEC41271 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F62C835B64FE312C7E9A5BEC /* Pods_Djaft.framework */,
-				6698B06595A399233D1C7B90 /* Pods_DjaftTests.framework */,
+				265095597B104472B4181D04B01EBA92 /* Pods_Djaft.framework */,
+				CA8DA5DDBBCE9802C57E0ED0CE699732 /* Pods_DjaftTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5E03A8F51C25BF0E003149CC /* Classes */ = {
+		A6713F6023A76CA7B98400D9216DE58C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76EC1C25A25E00FADBF0 /* DJMetaQuerySet.swift */,
-				5EEC76E81C25A25E00FADBF0 /* DJObjectManager.swift */,
-				5EEC76EB1C25A25E00FADBF0 /* DJQuerySetEvaluator.swift */,
-				5EEC76E71C25A25E00FADBF0 /* DJQuerySetCreator.swift */,
-				5EEC76E91C25A25E00FADBF0 /* DJRefinableQuerySet.swift */,
-				5EEC76EA1C25A25E00FADBF0 /* DJFinalQuerySet.swift */,
+				CAE0468EB59FA5225C9E647FBF6A82FC /* DJFinalQuerySet.swift */,
+				B53BEFC56DFE19AA86739E981B1ED690 /* DJMetaQuerySet.swift */,
+				E9FB10C17504A7FDF8D99CDFF70EC5F1 /* DJObjectManager.swift */,
+				2304F688C57BA06646F22D34317F1137 /* DJQuerySetCreator.swift */,
+				9880FC50AF7D52AD5E8387280E07570F /* DJQuerySetEvaluator.swift */,
+				3C58F495FDB2DDDB5C11907D05748CB5 /* DJRefinableQuerySet.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		5E03A8F61C25BF1C003149CC /* Functions */ = {
+		BB1ADCD7D3ADB2491B1EB27C78AA3949 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76F41C25A27F00FADBF0 /* errorPrinting.swift */,
+				F3051E06409233804F051D339C6A4E7C /* errorPrinting.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
 		};
-		5E03A8F71C25C17F003149CC /* QuerySetEvaluatorTests */ = {
+		E472DE59EFE15407865E7930C599E498 /* QuerySetEvaluatorTests */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = QuerySetEvaluatorTests;
 			sourceTree = "<group>";
 		};
-		5E03A8F81C25CB93003149CC /* Extensions */ = {
+		9BDA78B274C605729F8E2707C7D63953 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76E61C25A25E00FADBF0 /* NSManagedObject+Djaft.swift */,
+				E20826E1BD75DC5548FF2420AF5AE23B /* NSManagedObject+Djaft.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		5EE46B791C25E51A00C7CC14 /* Tests */ = {
+		8BF1F90885D68F741298627BA452B665 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76DA1C25A1D200FADBF0 /* DjaftBaseTest.swift */,
-				5E03A8F71C25C17F003149CC /* QuerySetEvaluatorTests */,
+				E472DE59EFE15407865E7930C599E498 /* QuerySetEvaluatorTests */,
+				687EE33091749D1C1F9748D104E7A61B /* DjaftBaseTest.swift */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
 		};
-		5EEC76C11C25A1D200FADBF0 = {
+		91A99E4125A7FBEED0760AB211011161 = {
 			isa = PBXGroup;
 			children = (
-				5EEC76CC1C25A1D200FADBF0 /* Products */,
-				5EEC76CD1C25A1D200FADBF0 /* Djaft */,
-				5EEC76D91C25A1D200FADBF0 /* DjaftTests */,
-				E54CC37A7068499529749BFC /* Pods */,
-				25440E007A4F1CC5CBE980D8 /* Frameworks */,
+				56B20676E93BCE773661C3A5E96EB7B1 /* Djaft */,
+				3843AE452D0BF24BC142D72F48949B9B /* DjaftTests */,
+				C9B0B6CBC14C5F0627504DECCEC41271 /* Frameworks */,
+				8B76847B4AFE388122ED53753167175F /* Pods */,
+				6844B4C8A7B25820CE7C99985F03F4B9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5EEC76CC1C25A1D200FADBF0 /* Products */ = {
+		6844B4C8A7B25820CE7C99985F03F4B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76CB1C25A1D200FADBF0 /* Djaft.framework */,
-				5EEC76D51C25A1D200FADBF0 /* DjaftTests.xctest */,
+				A7DAAEE9D579CD92E0C69380B4F100EC /* Djaft.framework */,
+				98995E1444AADE92B3B08C3D4898A636 /* DjaftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5EEC76CD1C25A1D200FADBF0 /* Djaft */ = {
+		56B20676E93BCE773661C3A5E96EB7B1 /* Djaft */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC76E51C25A20900FADBF0 /* Sources */,
-				5EEC76D01C25A1D200FADBF0 /* Info.plist */,
-				5EEC76CE1C25A1D200FADBF0 /* Djaft.h */,
+				39E94277D1EE24A8DB9806CF88AED1E3 /* Sources */,
+				61A6EFD49AAE7B85606317187CC3DE48 /* Djaft.h */,
+				C88FCD80F4AF2548D28D61D093CA543E /* Info.plist */,
 			);
 			path = Djaft;
 			sourceTree = "<group>";
 		};
-		5EEC76D91C25A1D200FADBF0 /* DjaftTests */ = {
+		3843AE452D0BF24BC142D72F48949B9B /* DjaftTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EE46B791C25E51A00C7CC14 /* Tests */,
-				5EEC76DC1C25A1D200FADBF0 /* Info.plist */,
-				5EE46B771C25D44100C7CC14 /* CoreDataMockSetup.swift */,
-				5EE46B7A1C25E5B500C7CC14 /* DjaftUnitTestDataModel.xcdatamodeld */,
+				8BF1F90885D68F741298627BA452B665 /* Tests */,
+				9B59792997E1B5A4B34F3984B1936DFB /* CoreDataMockSetup.swift */,
+				1B2A2B4B9BD557C19C0D49DA644020A1 /* DjaftUnitTestDataModel.xcdatamodeld */,
+				E9F83C6B93EF2B31020D3CDB012F7D80 /* Info.plist */,
 			);
 			path = DjaftTests;
 			sourceTree = "<group>";
 		};
-		5EEC76E51C25A20900FADBF0 /* Sources */ = {
+		39E94277D1EE24A8DB9806CF88AED1E3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5E03A8F81C25CB93003149CC /* Extensions */,
-				5E03A8F51C25BF0E003149CC /* Classes */,
-				5E03A8F61C25BF1C003149CC /* Functions */,
+				A6713F6023A76CA7B98400D9216DE58C /* Classes */,
+				9BDA78B274C605729F8E2707C7D63953 /* Extensions */,
+				BB1ADCD7D3ADB2491B1EB27C78AA3949 /* Functions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		E54CC37A7068499529749BFC /* Pods */ = {
+		8B76847B4AFE388122ED53753167175F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7686DCCECBDB3F767708D148 /* Pods-Djaft.debug.xcconfig */,
-				56A33DFF0DEBBDD69893F6AD /* Pods-Djaft.release.xcconfig */,
-				9E7490336DB81B770A7E534A /* Pods-DjaftTests.debug.xcconfig */,
-				2ADE9852C6C2273BA53D68C1 /* Pods-DjaftTests.release.xcconfig */,
+				A05396D7D1E9B513D58BF53E50C7298D /* Pods-Djaft.debug.xcconfig */,
+				DAE0046F55A866918EBECAA4C0A0C1AA /* Pods-Djaft.release.xcconfig */,
+				5CBCCD8123AD27A870F5ABA31137BC5D /* Pods-DjaftTests.debug.xcconfig */,
+				BF4B27BCDC5DD12C9C1891E2AFD7A087 /* Pods-DjaftTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -191,28 +191,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5EEC76C81C25A1D200FADBF0 /* Headers */ = {
+		14C5E7F497A09F714097F4BB8C41E9A0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E086C231C3881480090024C /* Djaft.h in Headers */,
+				6AB1D2E8D55FB017B3EEFD020D17AC53 /* Djaft.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5EEC76CA1C25A1D200FADBF0 /* Djaft */ = {
+		66650D0ED4343E8950C4D97CD72A170E /* Djaft */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EEC76DF1C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "Djaft" */;
+			buildConfigurationList = 0000A4097877ABEDC07F403CC759EC8C /* Build configuration list for PBXNativeTarget "Djaft" */;
 			buildPhases = (
-				101A8622C2C35D552EF11068 /* Check Pods Manifest.lock */,
-				5EEC76C61C25A1D200FADBF0 /* Sources */,
-				5EEC76C71C25A1D200FADBF0 /* Frameworks */,
-				5EEC76C81C25A1D200FADBF0 /* Headers */,
-				5EEC76C91C25A1D200FADBF0 /* Resources */,
-				D79A0FE729C2DC3139802F77 /* Embed Pods Frameworks */,
-				B6FBAFBDBD14C40AA5DB8A19 /* Copy Pods Resources */,
+				7EB3C0B7C6F9985D6DAAF2ED3FB3CF00 /* Check Pods Manifest.lock */,
+				47A68E6B9EC3184E74701B21042D30F3 /* Sources */,
+				6077908B70A74A6A932A35BE2EF32E9D /* Frameworks */,
+				14C5E7F497A09F714097F4BB8C41E9A0 /* Headers */,
+				DBD5709ED60B917E3A41530746598C33 /* Resources */,
+				F8F810C35BB1F4203D546CBC78EBD19D /* Embed Pods Frameworks */,
+				157CB1FD6B77E084A4612C696C0A4A38 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,75 +220,75 @@
 			);
 			name = Djaft;
 			productName = Djaft;
-			productReference = 5EEC76CB1C25A1D200FADBF0 /* Djaft.framework */;
+			productReference = A7DAAEE9D579CD92E0C69380B4F100EC /* Djaft.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5EEC76D41C25A1D200FADBF0 /* DjaftTests */ = {
+		0FE391A88063BFFA278A10048C80D508 /* DjaftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EEC76E21C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "DjaftTests" */;
+			buildConfigurationList = 89420EB0270BDC82C7A24CCDD9DD692A /* Build configuration list for PBXNativeTarget "DjaftTests" */;
 			buildPhases = (
-				971B393E24F13FE3EBB3CF2D /* Check Pods Manifest.lock */,
-				5EEC76D11C25A1D200FADBF0 /* Sources */,
-				5EEC76D21C25A1D200FADBF0 /* Frameworks */,
-				5EEC76D31C25A1D200FADBF0 /* Resources */,
-				869A134BB25C013D42D44489 /* Embed Pods Frameworks */,
-				2037B574156261B0DB4751DA /* Copy Pods Resources */,
+				D8A3D659344D5DC4DCAC55FE1934B5D3 /* Check Pods Manifest.lock */,
+				B82DABC646E9EB1E45784A5881ACF59C /* Sources */,
+				7785612677A78E870773A554AFD6CE52 /* Frameworks */,
+				531C8CEAC9698ECD32F7051A78420A31 /* Resources */,
+				6E09BB9A05B99A092FBAB2405F69B3AD /* Embed Pods Frameworks */,
+				832D0D742B46E8AB183AE8F77DA25803 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5EEC76D81C25A1D200FADBF0 /* PBXTargetDependency */,
+				7BF4FAA37872BABF41791045F109D0BF /* PBXTargetDependency */,
 			);
 			name = DjaftTests;
 			productName = DjaftTests;
-			productReference = 5EEC76D51C25A1D200FADBF0 /* DjaftTests.xctest */;
+			productReference = 98995E1444AADE92B3B08C3D4898A636 /* DjaftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5EEC76C21C25A1D200FADBF0 /* Project object */ = {
+		5CFDE3C0850D8826283FB4E300D9A404 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jan Nash";
 				TargetAttributes = {
-					5EEC76CA1C25A1D200FADBF0 = {
+					66650D0ED4343E8950C4D97CD72A170E = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					5EEC76D41C25A1D200FADBF0 = {
+					0FE391A88063BFFA278A10048C80D508 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
-			buildConfigurationList = 5EEC76C51C25A1D200FADBF0 /* Build configuration list for PBXProject "Djaft" */;
+			buildConfigurationList = B5755851427C897D24E4616137797DF8 /* Build configuration list for PBXProject "Djaft" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5EEC76C11C25A1D200FADBF0;
-			productRefGroup = 5EEC76CC1C25A1D200FADBF0 /* Products */;
+			mainGroup = 91A99E4125A7FBEED0760AB211011161;
+			productRefGroup = 6844B4C8A7B25820CE7C99985F03F4B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EEC76CA1C25A1D200FADBF0 /* Djaft */,
-				5EEC76D41C25A1D200FADBF0 /* DjaftTests */,
+				66650D0ED4343E8950C4D97CD72A170E /* Djaft */,
+				0FE391A88063BFFA278A10048C80D508 /* DjaftTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5EEC76C91C25A1D200FADBF0 /* Resources */ = {
+		DBD5709ED60B917E3A41530746598C33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EEC76D31C25A1D200FADBF0 /* Resources */ = {
+		531C8CEAC9698ECD32F7051A78420A31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,7 +298,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		101A8622C2C35D552EF11068 /* Check Pods Manifest.lock */ = {
+		7EB3C0B7C6F9985D6DAAF2ED3FB3CF00 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,7 +313,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		2037B574156261B0DB4751DA /* Copy Pods Resources */ = {
+		832D0D742B46E8AB183AE8F77DA25803 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +328,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DjaftTests/Pods-DjaftTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		869A134BB25C013D42D44489 /* Embed Pods Frameworks */ = {
+		6E09BB9A05B99A092FBAB2405F69B3AD /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,7 +343,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DjaftTests/Pods-DjaftTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		971B393E24F13FE3EBB3CF2D /* Check Pods Manifest.lock */ = {
+		D8A3D659344D5DC4DCAC55FE1934B5D3 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,7 +358,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B6FBAFBDBD14C40AA5DB8A19 /* Copy Pods Resources */ = {
+		157CB1FD6B77E084A4612C696C0A4A38 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,7 +373,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Djaft/Pods-Djaft-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D79A0FE729C2DC3139802F77 /* Embed Pods Frameworks */ = {
+		F8F810C35BB1F4203D546CBC78EBD19D /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,35 +391,35 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5EEC76C61C25A1D200FADBF0 /* Sources */ = {
+		47A68E6B9EC3184E74701B21042D30F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EEC76D11C25A1D200FADBF0 /* Sources */ = {
+		B82DABC646E9EB1E45784A5881ACF59C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE46B781C25D44100C7CC14 /* CoreDataMockSetup.swift in Sources */,
-				5EEC76DB1C25A1D200FADBF0 /* DjaftBaseTest.swift in Sources */,
-				5EE46B7C1C25E5B500C7CC14 /* DjaftUnitTestDataModel.xcdatamodeld in Sources */,
+				78CC9C7705FD9DD022A376998A18B9A7 /* CoreDataMockSetup.swift in Sources */,
+				33EABF5C22D931663092CB318819B927 /* DjaftBaseTest.swift in Sources */,
+				23E6B158F3CABDE52F9996DF1674D9D5 /* DjaftUnitTestDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5EEC76D81C25A1D200FADBF0 /* PBXTargetDependency */ = {
+		7BF4FAA37872BABF41791045F109D0BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5EEC76CA1C25A1D200FADBF0 /* Djaft */;
-			targetProxy = 5EEC76D71C25A1D200FADBF0 /* PBXContainerItemProxy */;
+			target = 66650D0ED4343E8950C4D97CD72A170E /* Djaft */;
+			targetProxy = 8DF45BC63023C5B6D430C26AE72DD082 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5EEC76DD1C25A1D200FADBF0 /* Debug */ = {
+		3451DACAF08102D0C788C0AFB9E8E972 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -467,7 +467,7 @@
 			};
 			name = Debug;
 		};
-		5EEC76DE1C25A1D200FADBF0 /* Release */ = {
+		7B5CAB2D5728502991E2F2BEDB46B102 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -508,9 +508,9 @@
 			};
 			name = Release;
 		};
-		5EEC76E01C25A1D200FADBF0 /* Debug */ = {
+		B9AB1E61046DE8A2A95DFE08860F3423 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7686DCCECBDB3F767708D148 /* Pods-Djaft.debug.xcconfig */;
+			baseConfigurationReference = A05396D7D1E9B513D58BF53E50C7298D /* Pods-Djaft.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -524,9 +524,9 @@
 			};
 			name = Debug;
 		};
-		5EEC76E11C25A1D200FADBF0 /* Release */ = {
+		97BDB81AD6FD9805CEDD69CA55ABFB51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56A33DFF0DEBBDD69893F6AD /* Pods-Djaft.release.xcconfig */;
+			baseConfigurationReference = DAE0046F55A866918EBECAA4C0A0C1AA /* Pods-Djaft.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -540,9 +540,9 @@
 			};
 			name = Release;
 		};
-		5EEC76E31C25A1D200FADBF0 /* Debug */ = {
+		65A1B84F67D71A36F18829A7EA59C34C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E7490336DB81B770A7E534A /* Pods-DjaftTests.debug.xcconfig */;
+			baseConfigurationReference = 5CBCCD8123AD27A870F5ABA31137BC5D /* Pods-DjaftTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DjaftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -551,9 +551,9 @@
 			};
 			name = Debug;
 		};
-		5EEC76E41C25A1D200FADBF0 /* Release */ = {
+		E7A04D7F8986EB69659AD1A120831FAB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ADE9852C6C2273BA53D68C1 /* Pods-DjaftTests.release.xcconfig */;
+			baseConfigurationReference = BF4B27BCDC5DD12C9C1891E2AFD7A087 /* Pods-DjaftTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DjaftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -565,29 +565,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5EEC76C51C25A1D200FADBF0 /* Build configuration list for PBXProject "Djaft" */ = {
+		B5755851427C897D24E4616137797DF8 /* Build configuration list for PBXProject "Djaft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EEC76DD1C25A1D200FADBF0 /* Debug */,
-				5EEC76DE1C25A1D200FADBF0 /* Release */,
+				3451DACAF08102D0C788C0AFB9E8E972 /* Debug */,
+				7B5CAB2D5728502991E2F2BEDB46B102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EEC76DF1C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "Djaft" */ = {
+		0000A4097877ABEDC07F403CC759EC8C /* Build configuration list for PBXNativeTarget "Djaft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EEC76E01C25A1D200FADBF0 /* Debug */,
-				5EEC76E11C25A1D200FADBF0 /* Release */,
+				B9AB1E61046DE8A2A95DFE08860F3423 /* Debug */,
+				97BDB81AD6FD9805CEDD69CA55ABFB51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EEC76E21C25A1D200FADBF0 /* Build configuration list for PBXNativeTarget "DjaftTests" */ = {
+		89420EB0270BDC82C7A24CCDD9DD692A /* Build configuration list for PBXNativeTarget "DjaftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EEC76E31C25A1D200FADBF0 /* Debug */,
-				5EEC76E41C25A1D200FADBF0 /* Release */,
+				65A1B84F67D71A36F18829A7EA59C34C /* Debug */,
+				E7A04D7F8986EB69659AD1A120831FAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -595,17 +595,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5EE46B7A1C25E5B500C7CC14 /* DjaftUnitTestDataModel.xcdatamodeld */ = {
+		1B2A2B4B9BD557C19C0D49DA644020A1 /* DjaftUnitTestDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5EE46B7B1C25E5B500C7CC14 /* DjaftUnitTestDataModel.xcdatamodel */,
+				8DE761ECDC71A08B8FED19E99B5C2465 /* DjaftUnitTestDataModel.xcdatamodel */,
 			);
-			currentVersion = 5EE46B7B1C25E5B500C7CC14 /* DjaftUnitTestDataModel.xcdatamodel */;
+			currentVersion = 8DE761ECDC71A08B8FED19E99B5C2465 /* DjaftUnitTestDataModel.xcdatamodel */;
 			path = DjaftUnitTestDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 5EEC76C21C25A1D200FADBF0 /* Project object */;
+	rootObject = 5CFDE3C0850D8826283FB4E300D9A404 /* Project object */;
 }

@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Djaft.podspec">
+   </FileRef>
+   <FileRef
+      location = "group:Gemfile">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:VERSION">
+   </FileRef>
+   <FileRef
       location = "group:Djaft.xcodeproj">
    </FileRef>
    <FileRef

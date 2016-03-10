@@ -1,6 +1,0 @@
-framework module Pods_Djaft {
-  umbrella header "Pods-Djaft-umbrella.h"
-
-  export *
-  module * { export * }
-}

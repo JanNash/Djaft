@@ -104,7 +104,7 @@ function install_commit_hooks
 function open_workspace
 {
 	echo "Opening workspace..."
-	open ./ResmioApp.xcworkspace
+	open ./Djaft.xcworkspace
 }
 
 

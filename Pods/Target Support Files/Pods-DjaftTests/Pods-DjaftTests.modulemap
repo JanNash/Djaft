@@ -1,6 +1,0 @@
-framework module Pods_DjaftTests {
-  umbrella header "Pods-DjaftTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

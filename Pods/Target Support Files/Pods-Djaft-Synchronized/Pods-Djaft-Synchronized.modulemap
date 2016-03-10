@@ -1,6 +1,0 @@
-framework module Synchronized {
-  umbrella header "Pods-Djaft-Synchronized-umbrella.h"
-
-  export *
-  module * { export * }
-}

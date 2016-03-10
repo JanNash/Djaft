@@ -27,11 +27,11 @@ function add_all_changes
 
 function run_synx_if_necessary
 {
-	PROJECT_FILE_CHANGED="$(git diff --cached --diff-filter=M --name-only ResmioApp.xcodeproj/project.pbxproj)"
+	PROJECT_FILE_CHANGED="$(git diff --cached --diff-filter=M --name-only Djaft.xcodeproj/project.pbxproj)"
 	if [ ! -z $PROJECT_FILE_CHANGED ]
 	then
 		echo "Project file has changed, running synx..."
-		bash -l -c "synx --prune ResmioApp.xcodeproj/"
+		bash -l -c "synx --prune Djaft.xcodeproj/"
 	else
 		echo "Project file hasn't changed, no need to run synx."
 	fi
@@ -40,7 +40,7 @@ function run_synx_if_necessary
 function run_xUnique
 {
 	echo "Running xUnique..."
-	bash -l -c "python .xUnique.py ResmioApp.xcodeproj/"
+	bash -l -c "python .xUnique.py Djaft.xcodeproj/"
 }
 
 
