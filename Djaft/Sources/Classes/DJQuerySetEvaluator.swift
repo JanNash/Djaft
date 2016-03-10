@@ -82,7 +82,7 @@ internal extension DJQuerySetEvaluator {
     
     // // Functions
     // Objects (Evaluates)
-    internal func __objects__<T: NSManagedObject>() -> [T] {
+    internal func __objects__() -> [T] {
         self._fetchObjectsIfNecessary()
         return self.__objects! as! [T]
     }
@@ -96,14 +96,14 @@ internal extension DJQuerySetEvaluator {
 
 
 // MARK: Main Implementation
-public class DJQuerySetEvaluator: AnyObject {
+public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
     // Initialization
     internal init(withClass klass: NSManagedObject.Type,
          objectContext: NSManagedObjectContext? = nil,
          filters: [String] = [],
          excludes: [String] = [],
          orderBys: [String]? = nil,
-         fetchedObjects: [NSManagedObject]? = nil) {
+         fetchedObjects: [T]? = nil) {
             
         self._klass = klass
         self.__objectContext = objectContext
@@ -138,7 +138,7 @@ public class DJQuerySetEvaluator: AnyObject {
     
     // Evaluation
     private var __count: Int?
-    private var __objects: [NSManagedObject]?
+    private var __objects: [T]?
 }
 
 

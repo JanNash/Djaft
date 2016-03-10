@@ -20,7 +20,7 @@ public class DJFinalQuerySet: DJMetaQuerySet {
          filters: [String] = [],
          excludes: [String] = [],
          orderBys: [String] = [],
-         fetchedObjects: [NSManagedObject]? = nil) {
+         fetchedObjects: [T]? = nil) {
          
             self._offset = offset
             self._limit = limit

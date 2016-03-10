@@ -1,0 +1,68 @@
+#!/bin/sh
+
+function create_temp_commit
+{
+	echo "Creating temporary commit with all staged changes..."
+	git commit --no-verify -m "Temporary commit created by pre-commit hook. Don't push."
+}
+
+function stash_the_rest
+{
+	echo "Stashing changes that weren't staged..."
+	git stash save -u "Temporary stash created by pre-commit hook. Don't pop or delete."
+}
+
+function reset_temp_commit
+{
+	printf "Resetting HEAD to the commit before the temporary commit, "
+	printf "to include previously staged changes ...\n"
+	git reset HEAD~
+}
+
+function add_all_changes
+{
+	echo "Adding all changes..."
+	git add .
+}
+
+function run_synx_if_necessary
+{
+	PROJECT_FILE_CHANGED="$(git diff --cached --diff-filter=M --name-only ResmioApp.xcodeproj/project.pbxproj)"
+	if [ ! -z $PROJECT_FILE_CHANGED ]
+	then
+		echo "Project file has changed, running synx..."
+		bash -l -c "synx --prune ResmioApp.xcodeproj/"
+	else
+		echo "Project file hasn't changed, no need to run synx."
+	fi
+}
+
+function run_xUnique
+{
+	echo "Running xUnique..."
+	bash -l -c "python .xUnique.py ResmioApp.xcodeproj/"
+}
+
+
+function main
+{
+	echo "# # # # #"
+	create_temp_commit
+	echo "# # #"
+	stash_the_rest
+	echo "# # #"
+	reset_temp_commit
+	echo "# # #"
+	add_all_changes
+	echo "# # #"
+	run_synx_if_necessary
+	echo "# # #"
+	run_xUnique
+	echo "# # #"
+	add_all_changes
+	echo "# # # # #"
+}
+
+
+main
+exit 0

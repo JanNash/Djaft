@@ -1,0 +1,28 @@
+#!/bin/sh
+
+function pop_stash
+{
+	if [ ! -z "$(git stash list)" ]
+	then
+		STASH_MESSAGE="Temporary stash created by pre-commit hook. Don't pop."
+		STASH_REF="$(git log -g stash --grep="$STASH_MESSAGE" --pretty=format:"%gd")"
+		if ! [ -z $STASH_REF ]
+		then 
+			echo "# # #"
+			echo "Popping temporary stash..."
+			git stash pop $STASH_REF
+			echo "# # #"
+		fi
+	fi
+}
+
+
+function main
+{
+	pop_stash
+}
+
+
+set -e
+main
+exit 0

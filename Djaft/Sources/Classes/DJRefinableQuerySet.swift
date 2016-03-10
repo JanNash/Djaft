@@ -21,7 +21,7 @@ public extension DJRefinableQuerySet {
     
     // Get Objects From Start To End With Step
     // (Evaluates)
-    public subscript(startIndex: Int, endIndex: Int, stepSize: Int) -> [NSManagedObject] {
+    public subscript(startIndex: Int, endIndex: Int, stepSize: Int) -> [T] {
         return self._objectsFromStart(startIndex, toEnd: endIndex, withStepSize: stepSize)
     }
     
@@ -66,7 +66,7 @@ private extension DJRefinableQuerySet {
 // MARK: Get Sliced QuerySet
 private extension DJRefinableQuerySet {
     private func _getSlicedQuerySet(startIndex: Int, endIndex: Int) -> DJFinalQuerySet {
-        var objects: [NSManagedObject]?
+        var objects: [T]?
         if self.isFetched {
             objects = self.__objects__()
         }
@@ -95,9 +95,9 @@ private extension DJRefinableQuerySet {
 
 // MARK: Get Objects From Start To End With Step
 private extension DJMetaQuerySet {
-    private func _objectsFromStart(startIndex: Int, toEnd endIndex: Int, withStepSize stepSize: Int) -> [NSManagedObject] {
+    private func _objectsFromStart(startIndex: Int, toEnd endIndex: Int, withStepSize stepSize: Int) -> [T] {
         self.evaluate()
-        var result: [NSManagedObject] = []
+        var result: [T] = []
         var index: Int = startIndex
         while index < endIndex {
             result.append(self[index]!)
