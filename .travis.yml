@@ -1,0 +1,12 @@
+language: objective-c
+osx_image: xcode7.2
+xcode_sdk: iphonesimulator9.2
+xcode_workspace: Djaft.xcworkspace
+xcode_scheme: Djaft
+cache: cocoapods
+
+branches:
+  only:
+    - master
+    - development
+    - /^release/
