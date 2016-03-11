@@ -15,7 +15,9 @@ class DjaftTest: XCTestCase {
     var mockContext: NSManagedObjectContext = CoreDataMockSetup.createObjectContext()
     
     func testFatalErrorWhenNoObjectContext() {
-        let _: NSManagedObject = NSManagedObject.objects.create()
+        self.expectFatalError() {
+            let _:NSManagedObject = NSManagedObject.objects.create()
+        }
     }
     
 }

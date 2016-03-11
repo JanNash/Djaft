@@ -47,20 +47,11 @@ public func precondition(@autoclosure condition: () -> Bool, @autoclosure _ mess
 // Stores custom assertions closures, by default it points to Swift functions,
 // But it's possible to override them in the test target
 public class Assertions {
-
-#if DEBUG
     public static var assertClosure              = swiftAssertClosure
     public static var assertionFailureClosure    = swiftAssertionFailureClosure
     public static var preconditionClosure        = swiftPreconditionClosure
     public static var preconditionFailureClosure = swiftPreconditionFailureClosure
     public static var fatalErrorClosure          = swiftFatalErrorClosure
-#else
-    public static let assertClosure              = swiftAssertClosure
-    public static let assertionFailureClosure    = swiftAssertionFailureClosure
-    public static let preconditionClosure        = swiftPreconditionClosure
-    public static let preconditionFailureClosure = swiftPreconditionFailureClosure
-    public static let fatalErrorClosure          = swiftFatalErrorClosure
-#endif
     
     public static let swiftAssertClosure              = { Swift.assert($0, $1, file: $2, line: $3) }
     public static let swiftAssertionFailureClosure    = { Swift.assertionFailure($0, file: $1, line: $2) }
@@ -68,4 +59,3 @@ public class Assertions {
     public static let swiftPreconditionFailureClosure = { Swift.preconditionFailure($0, file: $1, line: $2) }
     public static let swiftFatalErrorClosure          = { Swift.fatalError($0, file: $1, line: $2) }
 }
-

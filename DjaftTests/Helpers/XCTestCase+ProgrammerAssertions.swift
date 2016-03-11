@@ -15,7 +15,6 @@ import XCTest
 private let noReturnFailureWaitTime = 0.1
 
 public extension XCTestCase {
-    
     /**
      Expects an `assert` to be called with a false condition.
      If `assert` not called or the assert's condition is true, the test case will fail.
