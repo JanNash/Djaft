@@ -12,7 +12,7 @@ import CoreData
 
 // MARK: // Internal
 // MARK: Interface
-class DJQuerySetCreator: DJQuerySetEvaluator {
+extension DJQuerySetCreator {
     // Basic QuerySet Generation
     func __createRefinableQuerySet__(
         withNewFilters newFilters: [String] = [],
@@ -38,6 +38,10 @@ class DJQuerySetCreator: DJQuerySetEvaluator {
         return self._orderBy(params)
     }
 }
+
+
+// MARK: Class Declaration
+class DJQuerySetCreator: DJQuerySetEvaluator {}
 
 
 // MARK: // Private

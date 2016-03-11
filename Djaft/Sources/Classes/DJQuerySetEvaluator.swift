@@ -70,7 +70,31 @@ public extension DJQuerySetEvaluator {
 
 
 // MARK: Class Declaration
-public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
+public class DJQuerySetEvaluator: AnyObject {
+    
+    // Initialization
+    init(withClass klass: NSManagedObject.Type,
+        objectContext: NSManagedObjectContext? = nil,
+        filters: [String] = [],
+        excludes: [String] = [],
+        orderBys: [String]? = nil,
+        fetchedObjects: [NSManagedObject]? = nil) {
+            
+            self._klass = klass
+            self.__objectContext = objectContext
+            
+            self._filters = filters
+            self._excludes = excludes
+            self._orderBys = orderBys
+            
+            self._validateFilters()
+            self._validateExcludes()
+            self._validateOrderBys()
+            
+            self.__objects = fetchedObjects
+            self.__count = fetchedObjects?.count
+    }
+    
     // Private Constant Properties
     private let _klass: NSManagedObject.Type!
     
@@ -83,13 +107,13 @@ public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
     private let _offset: Int = 0
     private let _limit: Int = 0
     // Variable
-    private var _filters: [String]
-    private var _excludes: [String]
+    private var _filters: [String] = []
+    private var _excludes: [String] = []
     private var _orderBys: [String]?
     
     // Evaluation
     private var __count: Int?
-    private var __objects: [T]?
+    private var __objects: [NSManagedObject]?
 }
 
 
@@ -108,42 +132,15 @@ extension DJQuerySetEvaluator {
     
     // // Functions
     // Objects (Evaluates)
-    func __objects__() -> [T] {
+    func __objects__() -> [NSManagedObject] {
         self._fetchObjectsIfNecessary()
-        return self.__objects! as! [T]
+        return self.__objects!
     }
     
     // Count (Only Gets Count)
     func __count__() -> Int {
         self._getCountIfNecessary()
         return self.__count!
-    }
-}
-
-
-// MARK: Initialization
-extension DJQuerySetEvaluator {
-    // Initialization
-    init(withClass klass: NSManagedObject.Type,
-        objectContext: NSManagedObjectContext? = nil,
-        filters: [String] = [],
-        excludes: [String] = [],
-        orderBys: [String]? = nil,
-        fetchedObjects: [T]? = nil) {
-            
-            self._klass = klass
-            self.__objectContext = objectContext
-            
-            self._filters = filters
-            self._excludes = excludes
-            self._orderBys = orderBys
-            
-            self._validateFilters()
-            self._validateExcludes()
-            self._validateOrderBys()
-            
-            self.__objects = fetchedObjects
-            self.__count = fetchedObjects?.count
     }
 }
 

@@ -13,14 +13,8 @@ import CoreData
 // MARK: // Public
 // MARK: Class Declaration
 public class DJFinalQuerySet: DJMetaQuerySet {
-    private var _offset: Int
-    private var _limit: Int
-}
-
-
-// MARK: // Internal
-// MARK: Initialization
-extension DJFinalQuerySet {
+    // MARK: // Internal
+    // MARK: Initialization
     init(_withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         offset: Int = 0,
@@ -28,7 +22,7 @@ extension DJFinalQuerySet {
         filters: [String] = [],
         excludes: [String] = [],
         orderBys: [String] = [],
-        fetchedObjects: [T]? = nil) {
+        fetchedObjects: [NSManagedObject]? = nil) {
             
             self._offset = offset
             self._limit = limit
@@ -42,4 +36,9 @@ extension DJFinalQuerySet {
                 fetchedObjects: fetchedObjects
             )
     }
+    
+    // MARK: // Private
+    // MARK: Variable Properties
+    private var _offset: Int
+    private var _limit: Int
 }

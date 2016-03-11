@@ -50,16 +50,10 @@ public extension DJObjectManager {
 
 // MARK: Class Declaration
 public class DJObjectManager: DJQuerySetEvaluator {
-    private static var __defaultObjectContext: NSManagedObjectContext!
-    
-    private var __querySetCreator: DJQuerySetCreator!
-}
-
-
-// MARK: // Internal
-// MARK: Initialization
-extension DJObjectManager {
-    override init(withClass klass: NSManagedObject.Type,
+    // MARK: // Internal
+    // MARK: Initialization
+    override init(
+        withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         filters: [String] = [],
         excludes: [String] = [],
@@ -70,10 +64,15 @@ extension DJObjectManager {
                 objectContext: DJObjectManager.defaultObjectContext
             )
     }
+    
+    // MARK: // Private
+    // MARK: Stored Properties
+    private static var __defaultObjectContext: NSManagedObjectContext!
+    
+    private var __querySetCreator: DJQuerySetCreator!
 }
 
 
-// MARK: // Private
 // MARK: Computed Properties
 private extension DJObjectManager {
     private static var _defaultObjectContext: NSManagedObjectContext {
@@ -123,7 +122,7 @@ private extension DJObjectManager {
 private extension DJObjectManager {
     private func _all() -> DJFinalQuerySet {
         return DJFinalQuerySet(
-            withClass: self.klass,
+            _withClass: self.klass,
             objectContext: self.objectContext
         )
     }

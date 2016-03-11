@@ -15,7 +15,7 @@ import CoreData
 public extension DJMetaQuerySet {
     // Get Object At Index
     // (Evaluates)
-    public subscript(position: Int) -> T? {
+    public subscript(position: Int) -> NSManagedObject? {
         return self._getObjectAtIndex(position)
     }
 }
@@ -23,8 +23,8 @@ public extension DJMetaQuerySet {
 // MARK: SequenceType Extension
 extension DJMetaQuerySet: SequenceType {
     // Evaluates
-    public func generate() -> GeneratorOf<T> {
-        return DJQuerySetGenerator(self.__objects__())
+    public func generate() -> DJQuerySetGenerator {
+        return DJQuerySetGenerator(objects: self.__objects__())
     }
 }
 
@@ -36,27 +36,28 @@ public class DJMetaQuerySet: DJQuerySetEvaluator {}
 // MARK: // Private
 // MARK: Subscript Implementation Logic
 // Get Object At Index
-private extension DJMetaQuerySet where T: NSManagedObject {
-    private func _getObjectAtIndex(index: Int) -> T? {
+private extension DJMetaQuerySet {
+    private func _getObjectAtIndex(index: Int) -> NSManagedObject? {
         return self.__objects__()[index]
     }
 }
 
 
 // MARK: for-in Iteration Support
-public struct DJQuerySetGenerator<T: NSManagedObject>: GeneratorType {
-    private let _objects: [T]
+public struct DJQuerySetGenerator: GeneratorType {
+    
+    private let _objects: [NSManagedObject]
     private var _indexInSequence: Int = 0
     
-    internal init<T: NSManagedObject>(objects: [T]) {
+    internal init(objects: [NSManagedObject]) {
         self._objects = objects
     }
     
-    public mutating func next() -> T? {
+    public mutating func next() -> NSManagedObject? {
         if self._indexInSequence > self._objects.count {
             return nil
         } else {
-            let result: T = self._objects[self._indexInSequence++]
+            let result: NSManagedObject = self._objects[self._indexInSequence++]
             self._indexInSequence += 1
             return result
         }

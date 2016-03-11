@@ -9,16 +9,22 @@
 import CoreData
 
 
-// Internal Interface
-internal extension CoreDataMockSetup {
-    internal class func createObjectContext() -> NSManagedObjectContext {
+// MARK: // Internal
+// MARK: Interface
+extension CoreDataMockSetup {
+    class func createObjectContext() -> NSManagedObjectContext {
         return self._createObjectContext()
     }
 }
 
 
-// Main Implementation
-internal class CoreDataMockSetup: AnyObject {
+// MARK: Class Declaration
+class CoreDataMockSetup: AnyObject {}
+
+
+// MARK: // Private
+// MARK :Implementation
+private extension CoreDataMockSetup {
     private class func _createObjectContext() -> NSManagedObjectContext {
         let bundle: NSBundle = NSBundle(forClass: self)
         let modelURL = bundle.URLForResource("DjaftUnitTestDataModel", withExtension: "momd")
