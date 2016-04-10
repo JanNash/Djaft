@@ -70,29 +70,28 @@ public extension DJQuerySetEvaluator {
 
 
 // MARK: Class Declaration
-public class DJQuerySetEvaluator: AnyObject {
-    
+public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
     // Initialization
     init(withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         filters: [String] = [],
         excludes: [String] = [],
         orderBys: [String]? = nil,
-        fetchedObjects: [NSManagedObject]? = nil) {
+        fetchedObjects: [T]? = nil) {
             
-            self._klass = klass
-            self.__objectContext = objectContext
-            
-            self._filters = filters
-            self._excludes = excludes
-            self._orderBys = orderBys
-            
-            self._validateFilters()
-            self._validateExcludes()
-            self._validateOrderBys()
-            
-            self.__objects = fetchedObjects
-            self.__count = fetchedObjects?.count
+        self._klass = klass
+        self.__objectContext = objectContext
+        
+        self._filters = filters
+        self._excludes = excludes
+        self._orderBys = orderBys
+        
+        self._validateFilters()
+        self._validateExcludes()
+        self._validateOrderBys()
+        
+        self.__objects = fetchedObjects
+        self.__count = fetchedObjects?.count
     }
     
     // Private Constant Properties
@@ -113,7 +112,7 @@ public class DJQuerySetEvaluator: AnyObject {
     
     // Evaluation
     private var __count: Int?
-    private var __objects: [NSManagedObject]?
+    private var __objects: [T]?
 }
 
 
@@ -132,7 +131,7 @@ extension DJQuerySetEvaluator {
     
     // // Functions
     // Objects (Evaluates)
-    func __objects__() -> [NSManagedObject] {
+    func __objects__() -> [T] {
         self._fetchObjectsIfNecessary()
         return self.__objects!
     }
@@ -260,7 +259,7 @@ private extension DJQuerySetEvaluator {
                 if self.__objects != nil {
                     self.__count = self.__objects!.count
                 } else {
-                    let errorPointer: NSErrorPointer = NSErrorPointer()
+                    let errorPointer: NSErrorPointer = nil
                     self.__count = self.objectContext.countForFetchRequest(self._fetchRequest, error: errorPointer)
                     if errorPointer != nil {
                         printErrorFromPointer(errorPointer)
@@ -274,7 +273,7 @@ private extension DJQuerySetEvaluator {
         synchronized(self) {
             if self.__objects == nil {
                 do {
-                    try self.__objects = self.objectContext.executeFetchRequest(self._fetchRequest) as? [NSManagedObject]
+                    try self.__objects = self.objectContext.executeFetchRequest(self._fetchRequest) as? [T]
                 } catch let error as NSError {
                     printError(error)
                 }

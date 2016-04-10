@@ -13,24 +13,24 @@ import Foundation
 
 
 // MARK: Drop-in replacements
-public func assert(@autoclosure condition: () -> Bool, @autoclosure _ message: () -> String = "", file: StaticString = __FILE__, line: UInt = __LINE__) {
+public func assert(@autoclosure condition: () -> Bool, @autoclosure _ message: () -> String = "", file: StaticString = #file, line: UInt = #line) {
     Assertions.assertClosure(condition(), message(), file, line)
 }
 
-public func assertionFailure(@autoclosure message: () -> String = "", file: StaticString = __FILE__, line: UInt = __LINE__) {
+public func assertionFailure(@autoclosure message: () -> String = "", file: StaticString = #file, line: UInt = #line) {
     Assertions.assertionFailureClosure(message(), file, line)
 }
 
-public func precondition(@autoclosure condition: () -> Bool, @autoclosure _ message: () -> String = "", file: StaticString = __FILE__, line: UInt = __LINE__) {
+public func precondition(@autoclosure condition: () -> Bool, @autoclosure _ message: () -> String = "", file: StaticString = #file, line: UInt = #line) {
     Assertions.preconditionClosure(condition(), message(), file, line)
 }
 
-@noreturn public func preconditionFailure(@autoclosure message: () -> String = "", file: StaticString = __FILE__, line: UInt = __LINE__) {
+@noreturn public func preconditionFailure(@autoclosure message: () -> String = "", file: StaticString = #file, line: UInt = #line) {
     Assertions.preconditionFailureClosure(message(), file, line)
     runForever()
 }
 
-@noreturn public func fatalError(@autoclosure message: () -> String = "", file: StaticString = __FILE__, line: UInt = __LINE__) {
+@noreturn public func fatalError(@autoclosure message: () -> String = "", file: StaticString = #file, line: UInt = #line) {
     Assertions.fatalErrorClosure(message(), file, line)
     runForever()
 }

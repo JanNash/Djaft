@@ -12,29 +12,30 @@ import CoreData
 
 // MARK: // Public
 // MARK: Class Declaration
-public class DJFinalQuerySet: DJMetaQuerySet {
+public class DJFinalQuerySet<T: NSManagedObject>: DJMetaQuerySet<T> {
     // MARK: // Internal
     // MARK: Initialization
-    init(_withClass klass: NSManagedObject.Type,
+    init(
+        _withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         offset: Int = 0,
         limit: Int = -1,
         filters: [String] = [],
         excludes: [String] = [],
         orderBys: [String] = [],
-        fetchedObjects: [NSManagedObject]? = nil) {
+        fetchedObjects: [T]? = nil) {
             
-            self._offset = offset
-            self._limit = limit
-            
-            super.init(
-                withClass: klass,
-                objectContext: objectContext,
-                filters: filters,
-                excludes: excludes,
-                orderBys: orderBys,
-                fetchedObjects: fetchedObjects
-            )
+        self._offset = offset
+        self._limit = limit
+        
+        super.init(
+            withClass: klass,
+            objectContext: objectContext,
+            filters: filters,
+            excludes: excludes,
+            orderBys: orderBys,
+            fetchedObjects: fetchedObjects
+        )
     }
     
     // MARK: // Private

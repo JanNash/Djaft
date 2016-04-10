@@ -14,7 +14,7 @@ import CoreData
 // MARK: Interface
 public extension NSManagedObject {
     // Computed Class Properties
-    public static var objects: DJObjectManager {
+    public static var objects: DJObjectManager<NSManagedObject> {
         return self._objectManager
     }
     
@@ -35,7 +35,7 @@ public extension NSManagedObject {
 // MARK: Static Properties Declaration
 private extension NSManagedObject {
     // Object Manager
-    private static var __objectManager: DJObjectManager!
+    private static var __objectManager: DJObjectManager<NSManagedObject>!
     
     // Ordering
     private static var _defaultOrderBys: [String] = []
@@ -48,7 +48,7 @@ private extension NSManagedObject {
 // MARK: // Private
 // MARK: Static Computed Properties Implementation
 private extension NSManagedObject {
-    private static var _objectManager: DJObjectManager {
+    private static var _objectManager: DJObjectManager<NSManagedObject> {
         if self.__objectManager == nil {
             self.__objectManager = DJObjectManager(withClass: self)
         }
@@ -66,7 +66,7 @@ private extension NSManagedObject {
         let properties = class_copyPropertyList(myClass, &count);
         
         // iterate each objc_property_t struct
-        for var i: UInt32 = 0; i < count; i++ {
+        for i in 0..<count {
             let property = properties[Int(i)];
             
             // retrieve the property name by calling property_getName function
