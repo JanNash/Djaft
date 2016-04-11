@@ -20,11 +20,11 @@ public extension DJObjectManager {
     }
     
     // Creation/Deletion
-    public func create<T: NSManagedObject>() -> T {
+    public func create() -> T {
         return self._create()
     }
     
-    public func delete<T: NSManagedObject>(obj: T) {
+    public func delete(obj: T) {
         self._delete(obj)
     }
     
@@ -50,8 +50,19 @@ public extension DJObjectManager {
 
 // MARK: Class Declaration
 public class DJObjectManager<T: NSManagedObject>: DJQuerySetEvaluator<T> {
-    // MARK: // Internal
     // MARK: Initialization
+    public convenience init(withClass klass: NSManagedObject.Type) {
+        self.init(
+            withClass: klass,
+            objectContext: nil,
+            filters: [],
+            excludes: [],
+            orderBys: [],
+            fetchedObjects: nil
+        )
+    }
+    
+    // MARK: // Internal
     init(withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         filters: [String] = [],

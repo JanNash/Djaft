@@ -15,8 +15,7 @@ import CoreData
 public class DJFinalQuerySet<T: NSManagedObject>: DJMetaQuerySet<T> {
     // MARK: // Internal
     // MARK: Initialization
-    init(
-        _withClass klass: NSManagedObject.Type,
+    init(_withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         offset: Int = 0,
         limit: Int = -1,

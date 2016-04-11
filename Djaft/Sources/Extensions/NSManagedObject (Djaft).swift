@@ -14,9 +14,9 @@ import CoreData
 // MARK: Interface
 public extension NSManagedObject {
     // Computed Class Properties
-    public static var objects: DJObjectManager<NSManagedObject> {
-        return self._objectManager
-    }
+//    public class var objects: DJObjectManager<NSManagedObject> {
+//        return self._objectManager
+//    }
     
     // Class Default Properties
     public static var defaultOrderBys: [String] {
@@ -48,12 +48,12 @@ private extension NSManagedObject {
 // MARK: // Private
 // MARK: Static Computed Properties Implementation
 private extension NSManagedObject {
-    private static var _objectManager: DJObjectManager<NSManagedObject> {
-        if self.__objectManager == nil {
-            self.__objectManager = DJObjectManager(withClass: self)
-        }
-        return self.__objectManager
-    }
+//    private static var _objectManager: DJObjectManager<NSManagedObject> {
+//        if self.__objectManager == nil {
+//            self.__objectManager = DJObjectManager(withClass: self)
+//        }
+//        return self.__objectManager
+//    }
     
     private static var _propertyNames: [String] {
         // Thanks derpturkey
