@@ -86,9 +86,9 @@ private var __DJDefaultObjectContext: NSManagedObjectContext!
 private var _DJDefaultObjectContext: NSManagedObjectContext {
     get {
         if __DJDefaultObjectContext == nil {
-            fatalError("ProgrammingError: DJDefaultObjectContext" +
-                "and no individual object context was specified on the DJQuerySet that has been executed. " +
-                "Please make sure to assign a defaultObjectContext or at least an individual context" +
+            fatalError("ProgrammingError: DJDefaultObjectContext was not specified, nor was an " +
+                "individual object context specified on the DJQuerySet that has been executed. " +
+                "Please make sure to assign a defaultObjectContext or an individual context" +
                 "before executing any QuerySets!")
         }
         return __DJDefaultObjectContext
