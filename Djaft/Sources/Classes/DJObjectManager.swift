@@ -15,8 +15,12 @@ import CoreData
 public extension DJObjectManager {
     // Default Context
     public static var defaultObjectContext: NSManagedObjectContext {
-        get             {return _DJDefaultObjectContext}
-        set(newContext) {_DJDefaultObjectContext = newContext}
+        get {
+            return _DJDefaultObjectContext
+        }
+        set(newContext) {
+            _DJDefaultObjectContext = newContext
+        }
     }
     
     // Creation/Deletion
@@ -35,34 +39,23 @@ public extension DJObjectManager {
     
     // QuerySet Generation
     public func filter(params: String...) -> DJRefinableQuerySet<T> {
-        return self._querySetCreator.__filter__(params)
+        return self._getQuerySetCreator().__filter__(params)
     }
     
     public func exclude(params: String...) -> DJRefinableQuerySet<T> {
-        return self._querySetCreator.__exclude__(params)
+        return self._getQuerySetCreator().__exclude__(params)
     }
     
     public func orderBy(params: String...) -> DJRefinableQuerySet<T> {
-        return self._querySetCreator.__orderBy__(params)
+        return self._getQuerySetCreator().__orderBy__(params)
     }
 }
 
 
 // MARK: Class Declaration
 public class DJObjectManager<T: NSManagedObject>: DJQuerySetEvaluator<T> {
-    // MARK: Initialization
-    public convenience init(withClass klass: NSManagedObject.Type) {
-        self.init(
-            withClass: klass,
-            objectContext: nil,
-            filters: [],
-            excludes: [],
-            orderBys: [],
-            fetchedObjects: nil
-        )
-    }
-    
     // MARK: // Internal
+    // MARK: Initialization
     init(withClass klass: NSManagedObject.Type,
         objectContext: NSManagedObjectContext? = nil,
         filters: [String] = [],
@@ -75,12 +68,12 @@ public class DJObjectManager<T: NSManagedObject>: DJQuerySetEvaluator<T> {
             )
     }
     
-    // MARK: // Private
     // MARK: Stored Properties
-    private var __querySetCreator: DJQuerySetCreator<T>!
+    private var _querySetCreator: DJQuerySetCreator<T>!
 }
 
 
+// MARK: // Private
 // MARK: DJObjectManagerDefaultObjectContext
 private var __DJDefaultObjectContext: NSManagedObjectContext!
 private var _DJDefaultObjectContext: NSManagedObjectContext {
@@ -99,19 +92,19 @@ private var _DJDefaultObjectContext: NSManagedObjectContext {
 }
 
 
-// MARK: Computed Properties
+// MARK: Get Query Set Creator
 private extension DJObjectManager {
-    private var _querySetCreator: DJQuerySetCreator<T> {
-        if self.__querySetCreator == nil {
-            self.__querySetCreator = DJQuerySetCreator(
-                withClass: self.klass,
+    private func _getQuerySetCreator() -> DJQuerySetCreator<T> {
+        if self._querySetCreator == nil {
+            self._querySetCreator = DJQuerySetCreator(
+                withClass: self.klass_,
                 objectContext: self.objectContext,
                 filters: self.filters,
                 excludes: self.excludes,
                 orderBys: self.orderBys
             )
         }
-        return self.__querySetCreator
+        return self._querySetCreator
     }
 }
 
@@ -121,9 +114,9 @@ private extension DJObjectManager {
     // Creation/Deletion
     private func _create<T: NSManagedObject>() -> T {
         return NSEntityDescription.insertNewObjectForEntityForName(
-            self.className,
+            self.className_,
             inManagedObjectContext: self.objectContext
-            ) as! T
+        ) as! T
     }
     
     private func _delete<T: NSManagedObject>(obj: T) {
@@ -136,7 +129,7 @@ private extension DJObjectManager {
 private extension DJObjectManager {
     private func _all() -> DJFinalQuerySet<T> {
         return DJFinalQuerySet(
-            _withClass: self.klass,
+            _withClass: self.klass_,
             objectContext: self.objectContext
         )
     }

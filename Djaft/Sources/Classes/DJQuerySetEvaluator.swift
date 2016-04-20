@@ -17,38 +17,42 @@ public extension DJQuerySetEvaluator {
     // // // Variable Read-Write Properties
     // Object Context
     public var objectContext: NSManagedObjectContext {
-        get             {return self._objectContext}
-        set(newContext) {self._objectContext = newContext}
+        get {
+            return self._objectContext
+        }
+        set(newContext) {
+            self._objectContext = newContext
+        }
     }
     
     // Evaluation State
     public var isCounted: Bool {
-        get {return self._isCounted}
+        return self._isCounted
     }
     
     public var isFetched: Bool {
-        get {return self._isFetched}
+        return self._isFetched
     }
     
     // Fetch Properties
     public var offset: Int {
-        get {return self._offset}
+        return self._offset
     }
     
     public var limit: Int {
-        get {return self._limit}
+        return self._limit
     }
     
     public var filters: [String] {
-        get {return self._filters}
+        return self._filters
     }
     
     public var excludes: [String] {
-        get {return self._excludes}
+        return self._excludes
     }
     
     public var orderBys: [String] {
-        get {return self._orderBys ?? self.klass.defaultOrderBys}
+        return self._orderBys ?? self.klass_.defaultOrderBys
     }
     
     // // Functions
@@ -64,7 +68,7 @@ public extension DJQuerySetEvaluator {
     
     // Count
     public func count() -> Int {
-        return self.__count__()
+        return self.count_()
     }
 }
 
@@ -80,7 +84,7 @@ public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
         fetchedObjects: [T]? = nil) {
             
         self._klass = klass
-        self.__objectContext = objectContext
+        self._objectContext = objectContext
         
         self._filters = filters
         self._excludes = excludes
@@ -90,29 +94,29 @@ public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
         self._validateExcludes()
         self._validateOrderBys()
         
-        self.__objects = fetchedObjects
-        self.__count = fetchedObjects?.count
+        self._objects = fetchedObjects
+        self._count = fetchedObjects?.count
     }
     
     // Private Constant Properties
     private let _klass: NSManagedObject.Type!
     
     // Private Variable Properties
-    private var __objectContext: NSManagedObjectContext!
-    private var __fetchRequest: NSFetchRequest?
+    private var _objectContext: NSManagedObjectContext!
+    private var _fetchRequest: NSFetchRequest?
     
-    // Fetch Properties
-    // Constant
+    // Fetch Configuration Properties
+    // Constants
     private let _offset: Int = 0
     private let _limit: Int = 0
-    // Variable
+    // Variables
     private var _filters: [String] = []
     private var _excludes: [String] = []
     private var _orderBys: [String]?
     
-    // Evaluation
-    private var __count: Int?
-    private var __objects: [T]?
+    // Evaluation Caches
+    private var _count: Int?
+    private var _objects: [T]?
 }
 
 
@@ -121,25 +125,25 @@ public class DJQuerySetEvaluator<T: NSManagedObject>: AnyObject {
 extension DJQuerySetEvaluator {
     // // // Variable Readonly Properties
     // // Class Information
-    var klass: NSManagedObject.Type {
-        get {return self._klass}
+    var klass_: NSManagedObject.Type {
+        return self._klass
     }
     
-    var className: String {
-        get {return self._className}
+    var className_: String {
+        return self._className
     }
     
     // // Functions
     // Objects (Evaluates)
-    func __objects__() -> [T] {
+    func objects_() -> [T] {
         self._fetchObjectsIfNecessary()
-        return self.__objects!
+        return self._objects!
     }
     
     // Count (Only Gets Count)
-    func __count__() -> Int {
+    func count_() -> Int {
         self._getCountIfNecessary()
-        return self.__count!
+        return self._count!
     }
 }
 
@@ -149,22 +153,26 @@ extension DJQuerySetEvaluator {
 private extension DJQuerySetEvaluator {
     // Object Context
     private var _objectContext: NSManagedObjectContext {
-        get             {return self.__objectContext}
-        set(newContext) {self.__objectContext = newContext}
+        get {
+            return self._objectContext
+        }
+        set(newContext) {
+            self._objectContext = newContext
+        }
     }
     
     // Class Name
     private var _className: String {
-        return NSStringFromClass(self.klass).componentsSeparatedByString(".").last!
+        return NSStringFromClass(self.klass_).componentsSeparatedByString(".").last!
     }
     
     // Evaluation State
     private var _isCounted: Bool {
-        return self.__count != nil
+        return self._count != nil
     }
     
     private var _isFetched: Bool {
-        return self.__objects != nil
+        return self._objects != nil
     }
 }
 
@@ -174,7 +182,7 @@ private extension DJQuerySetEvaluator {
     private func _evaluate() {
         synchronized(self) {
             self._fetchObjectsIfNecessary()
-            self.__count = self.__objects!.count
+            self._count = self._objects!.count
         }
     }
 }
@@ -184,8 +192,8 @@ private extension DJQuerySetEvaluator {
 private extension DJQuerySetEvaluator {
     private func _reset() {
         synchronized(self) {
-            self.__objects = nil
-            self.__count = nil
+            self._objects = nil
+            self._count = nil
         }
     }
 }
@@ -209,12 +217,12 @@ private extension DJQuerySetEvaluator {
 
 // MARK: Construct FetchRequest
 private extension DJQuerySetEvaluator {
-    private var _fetchRequest: NSFetchRequest {
-        synchronized(self) {
-            if self.__fetchRequest == nil {
-                self.__fetchRequest = NSFetchRequest(entityName: self._className)
-                self.__fetchRequest!.fetchOffset = self.offset
-                self.__fetchRequest!.fetchLimit = self.limit
+    private func _getFetchRequest() -> NSFetchRequest {
+        return synchronized(self) {
+            if self._fetchRequest == nil {
+                self._fetchRequest = NSFetchRequest(entityName: self._className)
+                self._fetchRequest!.fetchOffset = self.offset
+                self._fetchRequest!.fetchLimit = self.limit
                 
                 var filterPredicates: [NSPredicate] = []
                 for filter in self.filters {
@@ -227,26 +235,38 @@ private extension DJQuerySetEvaluator {
                 }
                 
                 // (filter AND filter AND filter):
-                let filterPredicate: NSCompoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: filterPredicates)
+                let filterPredicate: NSCompoundPredicate = NSCompoundPredicate(
+                    andPredicateWithSubpredicates: filterPredicates
+                )
                 // (exclude OR exclude OR exclude):
-                let orCombinedExcludePredicate: NSCompoundPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: excludePredicates)
+                let orCombinedExcludePredicate: NSCompoundPredicate = NSCompoundPredicate(
+                    orPredicateWithSubpredicates: excludePredicates
+                )
                 // NOT (exclude OR exclude OR exclude):
-                let negatedExcludePredicate: NSCompoundPredicate = NSCompoundPredicate(notPredicateWithSubpredicate: orCombinedExcludePredicate)
+                let negatedExcludePredicate: NSCompoundPredicate = NSCompoundPredicate(
+                    notPredicateWithSubpredicate: orCombinedExcludePredicate
+                )
                 // (filter AND filter AND filter) AND NOT (exclude OR exclude OR exclude):
-                let completePredicate: NSCompoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [filterPredicate, negatedExcludePredicate])
+                let completePredicate: NSCompoundPredicate = NSCompoundPredicate(
+                    andPredicateWithSubpredicates: [filterPredicate, negatedExcludePredicate]
+                )
                 
-                self.__fetchRequest!.predicate = completePredicate
+                self._fetchRequest!.predicate = completePredicate
                 
                 var sortDescriptors: [NSSortDescriptor] = []
                 for orderBys in self.orderBys {
                     let ascending: Bool = orderBys[orderBys.startIndex] != "-"
-                    sortDescriptors.append(NSSortDescriptor(key: orderBys, ascending: ascending))
+                    let sortDescriptor: NSSortDescriptor = NSSortDescriptor(
+                        key: orderBys,
+                        ascending: ascending
+                    )
+                    sortDescriptors.append(sortDescriptor)
                 }
                 
-                self.__fetchRequest!.sortDescriptors = sortDescriptors
+                self._fetchRequest!.sortDescriptors = sortDescriptors
             }
+            return self._fetchRequest!
         }
-        return self.__fetchRequest!
     }
 }
 
@@ -255,28 +275,42 @@ private extension DJQuerySetEvaluator {
 private extension DJQuerySetEvaluator {
     private func _getCountIfNecessary() {
         synchronized(self) {
-            if self.__count == nil {
-                if self.__objects != nil {
-                    self.__count = self.__objects!.count
-                } else {
-                    let errorPointer: NSErrorPointer = nil
-                    self.__count = self.objectContext.countForFetchRequest(self._fetchRequest, error: errorPointer)
-                    if errorPointer != nil {
-                        printErrorFromPointer(errorPointer)
-                    }
-                }
+            if self._count != nil {
+                return
+            }
+            
+            if self._objects != nil {
+                self._count = self._objects!.count
+                return
+            }
+            
+            let context: NSManagedObjectContext = self.objectContext
+            let fetchRequest: NSFetchRequest = self._getFetchRequest()
+            let errorPointer: NSErrorPointer = nil
+            self._count = context.countForFetchRequest(
+                fetchRequest,
+                error: errorPointer
+            )
+            if errorPointer != nil {
+                // TODO!
+                printErrorFromPointer(errorPointer)
             }
         }
     }
     
     private func _fetchObjectsIfNecessary() {
         synchronized(self) {
-            if self.__objects == nil {
-                do {
-                    try self.__objects = self.objectContext.executeFetchRequest(self._fetchRequest) as? [T]
-                } catch let error as NSError {
-                    printError(error)
-                }
+            if self._objects != nil {
+                return
+            }
+            
+            let context: NSManagedObjectContext = self.objectContext
+            let fetchRequest: NSFetchRequest = self._getFetchRequest()
+            do {
+                try self._objects = context.executeFetchRequest(fetchRequest) as? [T]
+            } catch let error as NSError {
+                // TODO!
+                printError(error)
             }
         }
     }

@@ -68,7 +68,7 @@ private extension DJQuerySetCreator {
         withNewExcludes newExcludes: [String] = [],
         withNewOrderBys newOrderBys: [String] = []) -> DJRefinableQuerySet<T> {
             return DJRefinableQuerySet(
-                withClass: self.klass,
+                withClass: self.klass_,
                 objectContext: self.objectContext,
                 filters: self.filters + newFilters,
                 excludes: self.excludes + newExcludes,

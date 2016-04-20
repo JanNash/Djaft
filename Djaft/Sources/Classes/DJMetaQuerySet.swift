@@ -20,11 +20,12 @@ public extension DJMetaQuerySet {
     }
 }
 
+
 // MARK: SequenceType Extension
 extension DJMetaQuerySet: SequenceType {
     // Evaluates
-    public func generate() -> DJQuerySetGenerator<T> {
-        return DJQuerySetGenerator(objects: self.__objects__())
+    public func generate() -> DJQuerySetOutputGenerator<T> {
+        return DJQuerySetOutputGenerator(objects: self.objects_())
     }
 }
 
@@ -54,31 +55,9 @@ public class DJMetaQuerySet<T: NSManagedObject>: DJQuerySetEvaluator<T> {
 // Get Object At Index
 private extension DJMetaQuerySet {
     private func _getObjectAtIndex(index: Int) -> T? {
-        return self.__objects__()[index]
+        return self.objects_()[index]
     }
 }
 
 
 
-
-
-// MARK: for-in Iteration Support
-public struct DJQuerySetGenerator<T: NSManagedObject>: GeneratorType {
-    
-    private let _objects: [T]
-    private var _indexInSequence: Int = 0
-    
-    internal init(objects: [T]) {
-        self._objects = objects
-    }
-    
-    public mutating func next() -> T? {
-        if self._indexInSequence > self._objects.count {
-            return nil
-        } else {
-            let result: T = self._objects[self._indexInSequence]
-            self._indexInSequence += 1
-            return result
-        }
-    }
-}

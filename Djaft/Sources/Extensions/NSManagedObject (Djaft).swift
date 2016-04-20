@@ -13,15 +13,14 @@ import CoreData
 // MARK: // Public
 // MARK: Interface
 public extension NSManagedObject {
-    // Computed Class Properties
-//    public class var objects: DJObjectManager<NSManagedObject> {
-//        return self._objectManager
-//    }
-    
     // Class Default Properties
     public static var defaultOrderBys: [String] {
-        get              {return self._defaultOrderBys}
-        set(newOrderBys) {self._defaultOrderBys = newOrderBys}
+        get {
+            return self._defaultOrderBys
+        }
+        set(newOrderBys) {
+            self._defaultOrderBys = newOrderBys
+        }
     }
     
     // Instance Functions
@@ -34,9 +33,6 @@ public extension NSManagedObject {
 // MARK: // Internal
 // MARK: Static Properties Declaration
 private extension NSManagedObject {
-    // Object Manager
-    private static var __objectManager: DJObjectManager<NSManagedObject>!
-    
     // Ordering
     private static var _defaultOrderBys: [String] = []
     

@@ -69,7 +69,7 @@ private extension DJRefinableQuerySet {
     private var _querySetCreator: DJQuerySetCreator<T> {
         if self.__querySetCreator == nil {
             self.__querySetCreator = DJQuerySetCreator(
-                withClass: self.klass,
+                withClass: self.klass_,
                 objectContext: self.objectContext,
                 filters: self.filters,
                 excludes: self.excludes,
@@ -86,7 +86,7 @@ private extension DJRefinableQuerySet {
     private func _getSlicedQuerySet(startIndex: Int, endIndex: Int) -> DJFinalQuerySet<T> {
         var objects: [T]?
         if self.isFetched {
-            objects = self.__objects__()
+            objects = self.objects_()
         }
         
         var limit: Int = endIndex - startIndex
@@ -98,7 +98,7 @@ private extension DJRefinableQuerySet {
         }
         
         return DJFinalQuerySet(
-            _withClass: self.klass,
+            _withClass: self.klass_,
             objectContext: self.objectContext,
             offset: startIndex,
             limit: limit,
