@@ -17,7 +17,7 @@ public protocol ObjectManagerPossessingType: class {
 }
 
 
-// MARK
+// MARK: Default Implementation
 extension ObjectManagerPossessingType {
     public static var objects: DJObjectManager<QuerySetProducedClass> {
         return DJObjectManager<QuerySetProducedClass>(withClass: QuerySetProducedClass.self)
