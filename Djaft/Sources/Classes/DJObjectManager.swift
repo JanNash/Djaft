@@ -16,10 +16,10 @@ public extension DJObjectManager {
     // Default Context
     public static var defaultObjectContext: NSManagedObjectContext {
         get {
-            return _DJDefaultObjectContext
+            return self._defaultObjectContext
         }
         set(newContext) {
-            _DJDefaultObjectContext = newContext
+            self._defaultObjectContext = newContext
         }
     }
     
@@ -39,15 +39,15 @@ public extension DJObjectManager {
     
     // QuerySet Generation
     public func filter(params: String...) -> DJRefinableQuerySet<T> {
-        return self._getQuerySetCreator().__filter__(params)
+        return self._filter(params)
     }
     
     public func exclude(params: String...) -> DJRefinableQuerySet<T> {
-        return self._getQuerySetCreator().__exclude__(params)
+        return self._exclude(params)
     }
     
     public func orderBy(params: String...) -> DJRefinableQuerySet<T> {
-        return self._getQuerySetCreator().__orderBy__(params)
+        return self._orderBy(params)
     }
 }
 
@@ -75,36 +75,23 @@ public class DJObjectManager<T: NSManagedObject>: DJQuerySetEvaluator<T> {
 
 // MARK: // Private
 // MARK: DJObjectManagerDefaultObjectContext
-private var __DJDefaultObjectContext: NSManagedObjectContext!
-private var _DJDefaultObjectContext: NSManagedObjectContext {
-    get {
-        if __DJDefaultObjectContext == nil {
-            fatalError("ProgrammingError: DJDefaultObjectContext was not specified, nor was an " +
-                "individual object context specified on the DJQuerySet that has been executed. " +
-                "Please make sure to assign a defaultObjectContext or an individual context" +
-                "before executing any QuerySets!")
-        }
-        return __DJDefaultObjectContext
-    }
-    set(newContext) {
-        __DJDefaultObjectContext = newContext
-    }
-}
-
-
-// MARK: Get Query Set Creator
+private var __defaultObjectContext: NSManagedObjectContext!
 private extension DJObjectManager {
-    private func _getQuerySetCreator() -> DJQuerySetCreator<T> {
-        if self._querySetCreator == nil {
-            self._querySetCreator = DJQuerySetCreator(
-                withClass: self.klass_,
-                objectContext: self.objectContext,
-                filters: self.filters,
-                excludes: self.excludes,
-                orderBys: self.orderBys
-            )
+    private static var _defaultObjectContext: NSManagedObjectContext {
+        get {
+            if __defaultObjectContext == nil {
+                fatalError(
+                    "ProgrammingError: DJObjectManager.defaultObjectContext was not specified, " +
+                    "nor was an individual object context specified on the DJQuerySet that has " +
+                    "been executed. Please make sure to assign a defaultObjectContext or an " +
+                    "individual context before executing any QuerySets!"
+                )
+            }
+            return __defaultObjectContext
         }
-        return self._querySetCreator
+        set(newContext) {
+            __defaultObjectContext = newContext
+        }
     }
 }
 
@@ -132,5 +119,34 @@ private extension DJObjectManager {
             _withClass: self.klass_,
             objectContext: self.objectContext
         )
+    }
+}
+
+
+// MARK: QuerySet Generation
+private extension DJObjectManager {
+    private func _filter(params: [String]) -> DJRefinableQuerySet<T> {
+        return self._getQuerySetCreator().__filter__(params)
+    }
+    
+    private func _exclude(params: [String]) -> DJRefinableQuerySet<T> {
+        return self._getQuerySetCreator().__exclude__(params)
+    }
+    
+    private func _orderBy(params: [String]) -> DJRefinableQuerySet<T> {
+        return self._getQuerySetCreator().__orderBy__(params)
+    }
+    
+    private func _getQuerySetCreator() -> DJQuerySetCreator<T> {
+        if self._querySetCreator == nil {
+            self._querySetCreator = DJQuerySetCreator(
+                withClass: self.klass_,
+                objectContext: self.objectContext,
+                filters: self.filters,
+                excludes: self.excludes,
+                orderBys: self.orderBys
+            )
+        }
+        return self._querySetCreator
     }
 }

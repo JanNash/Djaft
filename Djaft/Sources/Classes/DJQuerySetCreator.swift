@@ -14,27 +14,24 @@ import CoreData
 // MARK: Interface
 extension DJQuerySetCreator {
     // Basic QuerySet Generation
-    func __createRefinableQuerySet__(
-        withNewFilters newFilters: [String] = [],
-        withNewExcludes newExcludes: [String] = [],
-        withNewOrderBys newOrderBys: [String] = []) -> DJRefinableQuerySet<T> {
-            return self._createRefinableQuerySet(
-                withNewFilters: newFilters,
-                withNewExcludes: newExcludes,
-                withNewOrderBys: newOrderBys
-            )
+    func createRefinableQuerySet_(newFilters newFilters: [String] = [], newExcludes: [String] = [], newOrderBys: [String] = []) -> DJRefinableQuerySet<T> {
+        return self._createRefinableQuerySet(
+            newFilters: newFilters,
+            newExcludes: newExcludes,
+            newOrderBys: newOrderBys
+        )
     }
     
     // Refined QuerySet Generation
-    func __filter__(params: [String]) -> DJRefinableQuerySet<T> {
+    func filter_(params: [String]) -> DJRefinableQuerySet<T> {
         return self._filter(params)
     }
     
-    func __exclude__(params: [String]) -> DJRefinableQuerySet<T> {
+    func exclude_(params: [String]) -> DJRefinableQuerySet<T> {
         return self._exclude(params)
     }
     
-    func __orderBy__(params: [String]) -> DJRefinableQuerySet<T> {
+    func orderBy_(params: [String]) -> DJRefinableQuerySet<T> {
         return self._orderBy(params)
     }
 }
@@ -63,17 +60,14 @@ class DJQuerySetCreator<T: NSManagedObject>: DJQuerySetEvaluator<T> {
 // MARK: // Private
 // MARK: Basic QuerySet Generation
 private extension DJQuerySetCreator {
-    private func _createRefinableQuerySet(
-        withNewFilters newFilters: [String] = [],
-        withNewExcludes newExcludes: [String] = [],
-        withNewOrderBys newOrderBys: [String] = []) -> DJRefinableQuerySet<T> {
-            return DJRefinableQuerySet(
-                withClass: self.klass_,
-                objectContext: self.objectContext,
-                filters: self.filters + newFilters,
-                excludes: self.excludes + newExcludes,
-                orderBys: self.orderBys + newOrderBys
-            )
+    private func _createRefinableQuerySet(newFilters newFilters: [String] = [], newExcludes: [String] = [], newOrderBys: [String] = []) -> DJRefinableQuerySet<T> {
+        return DJRefinableQuerySet(
+            withClass: self.klass_,
+            objectContext: self.objectContext,
+            filters: self.filters + newFilters,
+            excludes: self.excludes + newExcludes,
+            orderBys: self.orderBys + newOrderBys
+        )
     }
 }
 
@@ -81,14 +75,14 @@ private extension DJQuerySetCreator {
 // MARK: Refined QuerySet Generation
 private extension DJQuerySetCreator {
     private func _filter(params: [String]) -> DJRefinableQuerySet<T> {
-        return self._createRefinableQuerySet(withNewFilters: params)
+        return self._createRefinableQuerySet(newFilters: params)
     }
     
     private func _exclude(params: [String]) -> DJRefinableQuerySet<T> {
-        return self._createRefinableQuerySet(withNewExcludes: params)
+        return self._createRefinableQuerySet(newExcludes: params)
     }
     
     private func _orderBy(params: [String]) -> DJRefinableQuerySet<T> {
-        return self._createRefinableQuerySet(withNewOrderBys: params)
+        return self._createRefinableQuerySet(newOrderBys: params)
     }
 }
